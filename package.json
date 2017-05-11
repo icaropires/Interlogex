@@ -1,0 +1,33 @@
+{
+  "name": "interlogex",
+  "version": "0.0.1",
+  "description": "This is the application to Interlogex company",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "company",
+    "Interlogex"
+  ],
+  "author": "Marcelo Ferreira e Ícaro Pires",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "http-server": "^0.10.0",
+    "morgan": "^1.8.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-routes": "^0.2.6",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.4.5"
+  }
+}
