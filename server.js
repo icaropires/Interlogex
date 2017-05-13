@@ -9,8 +9,8 @@ app.use(Express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public'));
 app.use(logger('dev'));
-app.get('/index', function(request, response){
-  response.render('index');
+app.get('*', function(request, response){
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 var port = process.env.PORT || 3000;
