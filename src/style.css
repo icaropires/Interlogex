@@ -1,0 +1,35 @@
+.selected{
+  background-color: #ED8600;
+}
+.pre_header{
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  background: #e6e6e6;
+}
+.pre_header > img{
+  float: right;
+  max-height: 200px;
+  margin-right: 100px;
+}
+.pre_header > div{
+  margin-top: 50px;
+  margin-left: 40px;
+  position: relative;
+  float: left;
+  max-width: 300px;
+}
+.pre_header > div > label{
+  font-size:40px;
+} 
+#content{
+  margin-top: 60px;
+}
+@media only screen and (max-width: 1024px) {
+  .pre_header{
+    height: 300px;
+  }
+  #content{
+    margin-top: 250px;
+  }
+}
