@@ -3,14 +3,16 @@ import { Route, Switch} from 'react-router';
 import {BrowserRouter, Link, NavLink} from 'react-router-dom';
 import {
    Icon, Grid, Cell, Footer,
-   FooterSection, FooterLinkList, 
+   FooterSection, FooterLinkList,
    Layout, Navigation, Header, HeaderRow,
-   Drawer, Content, 
+   Drawer, Content, FooterDropDownSection, 
    } from 'react-mdl';
+
 import Home from './Home';
 import About from './About';
 import NotFound from './NotFound';
 import logo from "../public/imagem/logo.png";
+import deliver_toy from "../public/imagem/deliver_toy.png";
 import MaterialLayout from 'react-mdl';
 
 import './style.css';
@@ -23,7 +25,6 @@ class Interlogex extends React.Component {
     this.state.linkState[0]="selected";
   }
   handleClick(e, j){
-    console.log(e,j);
     this.state.linkState[this.state.prev]="";
     this.setState({prev: e});
     this.state.linkState[e]="selected";
@@ -40,6 +41,49 @@ class Interlogex extends React.Component {
   }
 }
 
+class FooterInterlogex extends React.Component {
+  render(){
+    return (
+        <Footer size="mega">
+          <FooterSection type="middle" className="title">
+            <FooterDropDownSection title="Telefones">
+              <FooterLinkList className="footer_list">
+              <Grid>
+                <Cell col={4}><label className="label">Atendimento:</label></Cell>
+                <Cell col={6}>(61) 3554-5467</Cell>
+                <Cell col={4}><label className="label">Secretária:</label></Cell>
+                <Cell col={6}>(61) 3554-5467</Cell>
+              </Grid>
+              </FooterLinkList>
+            </FooterDropDownSection>
+            <FooterDropDownSection title="E-mails">
+              <FooterLinkList className="footer_list">
+                <Grid>
+                  <Cell col={12}>contato@interlogex.com.br</Cell>
+                </Grid> 
+              </FooterLinkList>
+            </FooterDropDownSection>
+            <FooterDropDownSection title="Endereço físico">
+              <FooterLinkList className="footer_list">
+                <Grid>
+                  <Cell col={4}><label className="label">Nossa loja:</label></Cell>
+                  <Cell col={6}>Vicent Pires - DF, Rua 10, Chácara 175</Cell>
+                </Grid>
+              </FooterLinkList>
+            </FooterDropDownSection>
+            <FooterDropDownSection title="Mapa">
+              <FooterLinkList>
+              </FooterLinkList>
+            </FooterDropDownSection>
+          </FooterSection>
+          <FooterSection type="bottom">
+            <center className="company_name">InterLogEx © Internacional Logistica Express - Todos os direitos reservados</center>
+          </FooterSection>
+        </Footer>
+    );
+  }
+}
+
 export default class App extends React.Component {
   render(){
     return (
@@ -51,7 +95,7 @@ export default class App extends React.Component {
             <label>Interlogex</label>
             <span>Agora você vai saber o que é entrega</span>
           </div>
-          <img src={logo}></img>
+          <img src={deliver_toy}></img>
         </div>
         <Header scroll style={{backgroundColor: '#152635', marginTop: '250px'}}>
             <Interlogex />
@@ -68,28 +112,8 @@ export default class App extends React.Component {
             </Switch>
           </Cell>
         </Grid>
-        <Footer size="mini">
-          <FooterSection type="left" logo="Title">
-            <FooterLinkList>
-              <Link to="/">Home</Link>
-            </FooterLinkList>
-          </FooterSection>
-          <FooterSection type="right" logo="Contato">
-            <Grid>
-              <Cell col={4}>Telefone</Cell>
-              <Cell col={6}>(61) 3554-5467</Cell>
-            </Grid> 
-            <Grid>
-              <Cell col={4}>E-mail</Cell>
-              <Cell col={6}>contato@interlogex.com.br</Cell>
-            </Grid> 
-            <Grid>
-              <Cell col={4}>Nossa loja</Cell>
-              <Cell col={6}>Vicent Pires - DF, Rua 10, Chácara 175</Cell>
-            </Grid>
-          </FooterSection>
-        </Footer>
         </Content>
+        <FooterInterlogex />
       </Layout>
       </div>
     </BrowserRouter>
