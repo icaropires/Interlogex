@@ -16,6 +16,8 @@ import deliver_toy from "../public/imagem/deliver_toy.png";
 import MaterialLayout from 'react-mdl';
 
 import './style.css';
+import 'mdi/css/materialdesignicons.min.css';
+//<label className="label">Nossa loja:</label>
 
 class Interlogex extends React.Component {
   constructor(props){
@@ -49,25 +51,23 @@ class FooterInterlogex extends React.Component {
             <FooterDropDownSection title="Telefones">
               <FooterLinkList className="footer_list">
               <Grid>
-                <Cell col={4}><label className="label">Atendimento:</label></Cell>
-                <Cell col={6}>(61) 3554-5467</Cell>
-                <Cell col={4}><label className="label">Secretária:</label></Cell>
-                <Cell col={6}>(61) 3554-5467</Cell>
+                <Cell col={12}><label className="label"><i className="mdi mdi-phone-classic" /></label> (61) 3554-5467</Cell>
+                <Cell col={12}><label className="label"><i className="mdi mdi-cellphone" /></label> (61) 3554-5467</Cell>
               </Grid>
               </FooterLinkList>
             </FooterDropDownSection>
             <FooterDropDownSection title="E-mails">
               <FooterLinkList className="footer_list">
                 <Grid>
-                  <Cell col={12}>contato@interlogex.com.br</Cell>
+                  <Cell col={12}><i className="mdi mdi-email" /> contato@interlogex.com.br</Cell>
                 </Grid> 
               </FooterLinkList>
             </FooterDropDownSection>
             <FooterDropDownSection title="Endereço físico">
               <FooterLinkList className="footer_list">
                 <Grid>
-                  <Cell col={4}><label className="label">Nossa loja:</label></Cell>
-                  <Cell col={6}>Vicent Pires - DF, Rua 10, Chácara 175</Cell>
+                  <Cell col={4}> <label className="label"> <i className="mdi mdi-home" />Endereço</label></Cell>
+                  <Cell col={6}> Vicent Pires - DF, Rua 10, Chácara 175</Cell>
                 </Grid>
               </FooterLinkList>
             </FooterDropDownSection>
