@@ -28,6 +28,18 @@
 #content{
   margin-top: 60px;
 }
+#arrow{
+  display:none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 14px;
+}
+@media only screen and (max-width: 759px) {
+  #arrow{
+    display: block;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .pre_header{
     height: 350px;
@@ -36,7 +48,6 @@
     margin-top: 300px;
   }
 }
-
 
 .company_name{
   color: white;
@@ -47,6 +58,7 @@
 .label{
   font-weight: bold;
 }
-.title{
+#title{
   color:white;
+  font-size: 20px;
 }
