@@ -10,7 +10,8 @@ import {
 import Home from './Home';
 import About from './About';
 import NotFound from './NotFound';
-import logo from "../public/imagem/logo.png";
+import logo from "../public/imagem/logo_achatado.png";
+import telefone from "../public/imagem/telefone.png";
 import deliver_toy from "../public/imagem/deliver_toy.png";
 import MaterialLayout from 'react-mdl';
 import MenuInterlogex from './Menu';
@@ -25,10 +26,16 @@ export default class App extends React.Component {
     return (
     <BrowserRouter>
       <div>
-      <Layout style={{height: 'unset', minWidth: '400px'}}>
+      <Layout style={{height: 'unset', minWidth: '420px'}}>
         <div className="pre_header">
+          <img src={logo} className="logo" />
+          <img src={telefone} className="phone" />
+          <div>
+            <h1>O jeito certo de fazer entregas!</h1>
+          </div>
+          <div className="separator" />
         </div>
-        <Header scroll style={{backgroundColor: '#152635', marginTop: '350px'}}>
+        <Header scroll style={{backgroundColor: '#152635', marginTop: '250px'}}>
             <MenuInterlogex />
         </Header>
         <Drawer title="Interlogex">
