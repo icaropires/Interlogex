@@ -1,11 +1,16 @@
+body{
+  min-width: 400px;
+}
 .selected{
   background-color: #ED8600;
 }
 .pre_header{
   position: absolute;
-  height: 400px;
+  height: 350px;
   width: 100%;
-  background: #e6e6e6;
+  background: url("../public/imagem/logo_achatado.png") center / cover;
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
 }
 .pre_header > img{
   float: right;
@@ -14,7 +19,7 @@
   margin-top: 20px;
 }
 .pre_header > div{
-  margin-top: 50px;
+  margin-top: 60px;
   margin-left: 40px;
   position: relative;
   float: left;
@@ -27,6 +32,7 @@
 
 #content{
   margin-top: 60px;
+  margin-left: 60px;
 }
 #arrow{
   display:none;
@@ -46,6 +52,7 @@
   }
   #content{
     margin-top: 300px;
+    margin-left: 20px;
   }
 }
 
@@ -61,4 +68,35 @@
 #title{
   color:white;
   font-size: 20px;
+}
+
+.card_head{
+  width: 100%;
+}
+
+#card_head_title{
+  background: #152635;
+  color: white;
+}
+
+.card_head > img{
+  max-width: 320px;
+}
+
+.card_layout{
+  position: relative;
+  float: left;
+  margin-right: 150px;
+  padding: 5px;
+}
+
+.card_layout:last-child{
+  margin-right: unset;
+}
+
+@media only screen and (max-width: 862px) {
+  .card_layout{
+    margin-bottom: 50px;
+    margin-right: 60px;
+  }
 }

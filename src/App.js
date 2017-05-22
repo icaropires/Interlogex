@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, Switch} from 'react-router';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Link} from 'react-router-dom';
 import {
    Icon, Layout, Header, HeaderRow,
    Drawer, Content, Grid, Cell,
+   Card, CardTitle, CartText, CardActions
    } from 'react-mdl';
 
 import Home from './Home';
@@ -18,21 +19,16 @@ import FooterInterlogex from './Footer';
 import './style.css';
 import 'mdi/css/materialdesignicons.min.css';
 
-
+// <img src={deliver_toy}></img>
 export default class App extends React.Component {
   render(){
     return (
     <BrowserRouter>
       <div>
-      <Layout style={{height: 'unset'}}>
+      <Layout style={{height: 'unset', minWidth: '400px'}}>
         <div className="pre_header">
-          <div>
-            <label>Interlogex</label>
-            <span>Agora você vai saber o que é entrega</span>
-          </div>
-          <img src={deliver_toy}></img>
         </div>
-        <Header scroll style={{backgroundColor: '#152635', marginTop: '250px'}}>
+        <Header scroll style={{backgroundColor: '#152635', marginTop: '350px'}}>
             <MenuInterlogex />
         </Header>
         <Drawer title="Interlogex">
