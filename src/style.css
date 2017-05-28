@@ -132,3 +132,28 @@ body{
   }
 }
 
+.contato h1{
+  color: #872f54;
+  font-size: 40px;
+}
+.cell_custom{
+  background: #152635;
+  color: #9f9f9f;
+}
+.contact_head{
+  background: url('../public/imagem/background_car_moto.png');
+  background-size: cover;
+  background-position: left center;
+  text-align: center;
+  font-size: 55px;
+}
+.card_contact{
+  width: 100%;
+  font-weight: bold;
+}
+
+.ddd{
+  margin-left: 10px;
+  color: #872f54;
+  font-weight: bold;
+}
