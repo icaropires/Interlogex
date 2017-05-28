@@ -1,17 +1,38 @@
 var Express = require('express');
+var Mailer = require('express-mailer');
 var http = require('http');
 var path = require('path');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 
-var app = new Express();
+app = new Express();
 var server = new http.Server(app);
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.use(Express.static(path.join(__dirname, 'public')));
 app.use(Express.static(path.join(__dirname, 'public','assets')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public'));
 app.use(logger('dev'));
-app.get('*', function(request, response){
+Mailer.extend(app, {
+  from: 'funbox.pjunb@gmail.com',
+  host: 'smtp.gmail.com',
+  secureConnection: true,
+  port: 465,
+  transportMethod: 'SMTP',
+  auth: { 
+    user: 'funbox.pjunb@gmail.com',
+    pass: 'funbox@pjunb'
+  }
+});
+app.post('/contato', function(request, response, next){
+//  app.mailer.send('email',{to: 'marcelohpf@gmail.com',  subject: 'Test', }, function(err) { if(err) {console.error(err); response.send("Problem in e-mail delivery"); } else { console.log('Email sent'); response.send("Email Delivered");  }} );
+  console.log(request.params, request.body );
+  response.send("ok");
+});
+app.get('*', function(request, response, next){
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+
 });
 
 var port = process.env.PORT || 3000;
