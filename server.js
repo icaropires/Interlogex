@@ -26,25 +26,44 @@ Mailer.extend(app, {
   }
 });
 app.post('/contato', function(request, response, next){
-    app.mailer.send('email',{
-      from: request.body.email,
-      to: 'marcelohpf@gmail.com',
-      subject: `Contato: ${request.body.title}`,
-      title: request.body.title,
-      name: request.body.name,
-      body: request.body.body,
-      phone: request.body.phone,
-      email: request.body.email,
-    }, function(err, message) {
-      if(err) {
-        console.error(err); 
-        response.send("Problem in e-mail delivery");
-      } else {
-         console.log('Email sent'); 
-         //response.send("Email Delivered");
-         response.send(message);
-      }
-  });
+  var message = "";
+  /*app.mailer.send('email',{
+    from: request.body.email,
+    to: 'marcelohpf@gmail.com',
+    subject: `Contato: ${request.body.title}`,
+    title: request.body.title,
+    name: request.body.name,
+    body: request.body.body,
+    phone: request.body.phone,
+    email: request.body.email,
+  }, function(err, message) {
+    if(err) {
+      console.error(err); 
+    } else {
+       console.log('Email sent');
+       message += "Enviado para Zoho\n";
+       //response.send("Email Delivered");
+    }
+});*/
+  app.mailer.send('noreply',{
+    to: request.body.email,
+    subject: 'Obrigado pelo contato',
+    name: request.body.name,
+    attachments: [{
+      fileName: "logo2.png",
+      filePath: "./public/imagem/logo2.png",
+      cid: 'logo',
+      }]
+  }, function(err, message) {
+    if(err) {
+      console.error(err); 
+    } else {
+       console.log('Email sent'); 
+       message += "Enviado no-reply\n";
+       //response.send("Email Delivered");
+    }
+});
+  response.send(message);
 });
 app.get('*', function(request, response, next){
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
