@@ -95,13 +95,15 @@ body{
 }
 
 .card_head > img{
+  height: 320px;
   max-width: 320px;
 }
 
 .card_layout{
   position: relative;
   float: left;
-  margin-right: 150px;
+  margin-right: 100px;
+  margin-top: 50px;
   padding: 5px;
 }
 

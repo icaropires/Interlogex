@@ -48,6 +48,7 @@ export default class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/contato" component={Contact} />
+              <Route exact path="/quemsomos" component={About} />
               <Route component={NotFound} />
             </Switch>
           </Cell>
