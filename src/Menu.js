@@ -19,8 +19,8 @@ export default class MenuInterlogex extends React.Component {
         <Navigation>
             <Link className={this.state.linkState[0]} onClick={this.handleClick.bind(this,0)} to="/">Home</Link>
             <Link to="/quemsomos" className={this.state.linkState[1]} onClick={this.handleClick.bind(this,1)}>Sobre nós</Link>
-            <Link to="/servicos" className={this.state.linkState[2]} onClick={this.handleClick.bind(this,2)}>Serviços</Link>
             <Link to="/contato" className={this.state.linkState[3]}onClick={this.handleClick.bind(this,3)}>Contatos</Link>
+            <Link to="" onClick={()=> {window.location.href="http://google.com/";}}>Acompanhamento de pedidos</Link>
         </Navigation>
     );
   }

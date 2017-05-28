@@ -20,14 +20,7 @@ import FooterInterlogex from './Footer';
 
 import './style.css';
 import 'mdi/css/materialdesignicons.min.css';
-
-// <img src={deliver_toy}></img>
-export default class App extends React.Component {
-  render(){
-    return (
-    <BrowserRouter>
-      <div>
-      <Layout style={{height: 'unset', minWidth: '420px'}}>
+const PreHeader = (
         <div className="pre_header">
           <img src={logo} className="logo" />
           <img src={telefone} className="phone" />
@@ -36,27 +29,39 @@ export default class App extends React.Component {
           </div>
           <div className="separator" />
         </div>
+);
+const InterlogexContent = (
+        <Content id="content">
+          <Grid>
+            <Cell col={12}>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/contato" component={Contact} />
+                <Route exact path="/quemsomos" component={About} />
+                <Route component={NotFound} />
+              </Switch>
+            </Cell>
+          </Grid>
+        </Content>
+);
+
+// <img src={deliver_toy}></img>
+export default class App extends React.Component {
+  render(){
+    return (
+    <BrowserRouter>
+      <Layout style={{height: 'unset', minWidth: '420px'}}>
+        {PreHeader}
         <Header scroll style={{backgroundColor: '#152635', marginTop: '250px'}}>
             <MenuInterlogex />
         </Header>
         <Drawer title="Interlogex">
           <MenuInterlogex />
         </Drawer>
-        <Content id="content">
-        <Grid>
-          <Cell col={12}>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/contato" component={Contact} />
-              <Route exact path="/quemsomos" component={About} />
-              <Route component={NotFound} />
-            </Switch>
-          </Cell>
-        </Grid>
-        </Content>
+        {InterlogexContent}
         <FooterInterlogex />
+        
       </Layout>
-      </div>
     </BrowserRouter>
     );
   }

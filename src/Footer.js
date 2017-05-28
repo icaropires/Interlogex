@@ -9,7 +9,7 @@ export default class FooterInterlogex extends React.Component {
     return (
         <Footer size="mega">
           <FooterSection type="middle">
-            <FooterDropDownSection>
+            <FooterDropDownSection title="">
               <h1 className="mdl-mega-footer--heading mdl-mega-footer__heading" id="title">Telefones <Icon name="expand_more" id="arrow"/></h1>
               <FooterLinkList className="footer_list">
               <Grid>
@@ -18,7 +18,7 @@ export default class FooterInterlogex extends React.Component {
               </Grid>
               </FooterLinkList>
             </FooterDropDownSection>
-            <FooterDropDownSection>
+            <FooterDropDownSection title="">
               <h1 className="mdl-mega-footer--heading mdl-mega-footer__heading" id="title">E-mails <Icon name="expand_more" id="arrow"/></h1>
               <FooterLinkList className="footer_list">
                 <Grid>
@@ -26,7 +26,7 @@ export default class FooterInterlogex extends React.Component {
                 </Grid> 
               </FooterLinkList>
             </FooterDropDownSection>
-            <FooterDropDownSection>
+            <FooterDropDownSection title="">
               <h1 className="mdl-mega-footer--heading mdl-mega-footer__heading" id="title">Endereço <Icon name="expand_more" id="arrow"/></h1>
               <FooterLinkList className="footer_list">
                 <Grid>
