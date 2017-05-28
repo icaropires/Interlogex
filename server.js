@@ -27,24 +27,25 @@ Mailer.extend(app, {
 });
 app.post('/contato', function(request, response, next){
   var message = "";
-  /*app.mailer.send('email',{
+  app.mailer.send('email',{
     from: request.body.email,
     to: 'marcelohpf@gmail.com',
-    subject: `Contato: ${request.body.title}`,
-    title: request.body.title,
+    subject: `Contato: ${request.body.subject}`,
+    title: request.body.subject,
     name: request.body.name,
     body: request.body.body,
     phone: request.body.phone,
     email: request.body.email,
   }, function(err, message) {
     if(err) {
-      console.error(err); 
+      console.error(err);
     } else {
        console.log('Email sent');
        message += "Enviado para Zoho\n";
        //response.send("Email Delivered");
+       //response.send(message);
     }
-});*/
+  });
   app.mailer.send('noreply',{
     to: request.body.email,
     subject: 'Obrigado pelo contato',
