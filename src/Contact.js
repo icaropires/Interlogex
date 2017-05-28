@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Cell, Icon,
         Textfield, Button, Spinner, Snackbar } from 'react-mdl';
-
+import ContactMap from './ContactMap';
 import 'mdi/css/materialdesignicons.min.css';
 import request from 'ajax-request';
 
@@ -152,10 +152,8 @@ export default class Contact extends React.Component {
         </Grid>
         <Grid>
           <Cell col={12}><h1>Localização no mapa</h1></Cell>
-          <Cell col={12}>
-          <div className="maps">
-          Mapa
-          </div>
+          <Cell col={12} className="maps">
+          <ContactMap  />
           </Cell>
         </Grid>
       </div>

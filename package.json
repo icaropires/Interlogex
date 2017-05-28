@@ -17,7 +17,6 @@
   "author": "Marcelo Ferreira e Ícaro Pires",
   "license": "MIT",
   "dependencies": {
-    "ajax": "0.0.4",
     "ajax-request": "^1.2.2",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
