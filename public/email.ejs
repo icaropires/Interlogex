@@ -1,9 +1,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>contato interlogex</title>
+    <title><%- title %></title>
   </head>
   <body>
-    Testing some message in this configuration
+    <h1><%- title %></h1>
+    <p><%- body %></p>
+    <br />
+    <%- name %> <%- email %>
+    <br />
+    Telefone: <% if (phone){ %> <%- phone %> <% } else { %> Não fornecido <% } %>
   </body>
 </html>

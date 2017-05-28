@@ -26,9 +26,25 @@ Mailer.extend(app, {
   }
 });
 app.post('/contato', function(request, response, next){
-//  app.mailer.send('email',{to: 'marcelohpf@gmail.com',  subject: 'Test', }, function(err) { if(err) {console.error(err); response.send("Problem in e-mail delivery"); } else { console.log('Email sent'); response.send("Email Delivered");  }} );
-  console.log(request.params, request.body );
-  response.send("ok");
+    app.mailer.send('email',{
+      from: request.body.email,
+      to: 'marcelohpf@gmail.com',
+      subject: `Contato: ${request.body.title}`,
+      title: request.body.title,
+      name: request.body.name,
+      body: request.body.body,
+      phone: request.body.phone,
+      email: request.body.email,
+    }, function(err, message) {
+      if(err) {
+        console.error(err); 
+        response.send("Problem in e-mail delivery");
+      } else {
+         console.log('Email sent'); 
+         //response.send("Email Delivered");
+         response.send(message);
+      }
+  });
 });
 app.get('*', function(request, response, next){
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
