@@ -128,26 +128,28 @@ export default class Contact extends React.Component {
               </Cell>
               <Cell col={12}>
                 <Icon name="smartphone"/>
-                <label className="ddd">(61)</label> 3554-5467
+                <label className="ddd">(61)</label> 99552-3590
               </Cell>
               <Cell col={12}>
                 <i className="mdi mdi-whatsapp mdi-24px" />
-                <label className="ddd">+55 61 </label>3554-54687
+                <label className="ddd">+55 61 </label>99552-3590
               </Cell>
             </div>
             <Cell col={12}><h1>Mídias sociais</h1></Cell>
             <Cell col={12}>
               <Cell col={12}>
-                <i className="mdi mdi-facebook mdi-24px" />
+                <i className="mdi mdi-facebook mdi-24px" style={{marginRight: '10px'}} />
                 @interlogex
               </Cell>
               <Cell col={12}>
-                <Icon name="email" />
+                <Icon name="email" style={{marginRight: '10px'}} />
                 interlogex@interlogex.com.br
               </Cell>
             </Cell>
             <Cell col={12}><h1>Endereço</h1></Cell>
-            <Icon name="home" />Vicent Pires - DF, Rua 10, Chácara 175
+            <Cell col={12}>
+            <Icon name="home" style={{marginRight: '10px'}}/>SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicent Pires - DF
+            </Cell>
           </Cell>
         </Grid>
         <Grid>

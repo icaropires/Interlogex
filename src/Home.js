@@ -8,6 +8,7 @@ import header from '../public/imagem/header.png';
 import business from '../public/imagem/business.png';
 import negotiation from '../public/imagem/client_handle.jpg';
 
+// <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
 class CardHome extends React.Component {
   render(){
     return (
@@ -16,11 +17,10 @@ class CardHome extends React.Component {
             <img src={this.props.image} />
           </div>
           <CardTitle id="card_head_title">{this.props.title}</CardTitle>
-          <CardText>
+          <CardText style={{minHeight: '300px'}}>
             {this.props.children}
           </CardText>
           <CardActions border>
-            <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
           </CardActions>
         </Card>
     );
@@ -40,17 +40,17 @@ export default class Home extends React.Component {
             Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.
             <br />
             Vantagens em nos contratar:
-            <List >
-              <ListItem style={{color: '#757575'}}>
+            <List style={{padding: '0'}}>
+              <ListItem style={{color: '#757575', padding:'0'}}>
                 <ListItemContent icon="location_on">Rastreamento da carga</ListItemContent>
               </ListItem>
-              <ListItem style={{color: '#757575'}}>
+              <ListItem style={{color: '#757575', padding:'0'}}>
                 <ListItemContent icon="assignment_turned_in">Confirmação de entrega</ListItemContent>
               </ListItem>
-              <ListItem style={{color: '#757575'}}>
+              <ListItem style={{color: '#757575', padding:'0'}}>
                 <ListItemContent icon="map">Coleta e entrega no local desejado</ListItemContent>
               </ListItem>
-              <ListItem style={{color: '#757575'}}>
+              <ListItem style={{color: '#757575', padding:'0'}}>
                 <ListItemContent icon="schedule">Coletas programadas com flexibilidade de horários</ListItemContent>
               </ListItem>
             </List>
