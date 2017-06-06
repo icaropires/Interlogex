@@ -12,6 +12,10 @@ export default class MenuInterlogex extends React.Component {
     this.state = { activeItem: window.location.pathname};
     window.scroll(0,0);
   }
+  componentWillMount(){
+    this.state = { activeItem: window.location.pathname};
+    window.scroll(0,0);
+  }
 
   render(){
     return (

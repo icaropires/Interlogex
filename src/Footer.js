@@ -1,7 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {
     Footer, FooterLinkList, FooterSection,
-    FooterDropDownSection, Grid, Cell, Icon
+    FooterDropDownSection, Grid, Cell, Icon,
+    Tooltip
     } from 'react-mdl';
 
 export default class FooterInterlogex extends React.Component {
@@ -22,7 +24,7 @@ export default class FooterInterlogex extends React.Component {
               <h1 className="mdl-mega-footer--heading mdl-mega-footer__heading" id="title">E-mails <Icon name="expand_more" id="arrow"/></h1>
               <FooterLinkList className="footer_list">
                 <Grid>
-                  <Cell col={12}><Icon name="email" /> interlogex@interlogex.com.br</Cell>
+                  <Cell col={12}><Icon name="email" style={{marginRight: "10px"}} /><Tooltip label="Envie-nos um e-mail" large><Link style={{textDecoration: "none", color: "inherit"}} to="mailto:interlogex@interlogex.com.br" target="_blank"> interlogex@interlogex.com.br</Link></Tooltip></Cell>
                 </Grid> 
               </FooterLinkList>
             </FooterDropDownSection>
