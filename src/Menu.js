@@ -22,7 +22,6 @@ export default class MenuInterlogex extends React.Component {
         <Navigation>
             <Link className={this.state.activeItem === "/"?"selected":""} to="/">Home</Link>
             <Link to="/contato" className={this.state.activeItem === "/contato"?"selected":""}>Contatos</Link>
-            <Link to="" onClick={()=> {window.location.href="http://google.com/";}}>Acompanhamento de pedidos</Link>
         </Navigation>
     );
   }

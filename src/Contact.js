@@ -151,7 +151,7 @@ export default class Contact extends React.Component {
             </Cell>
             <Cell col={12}><h1>Endereço</h1></Cell>
             <Cell col={12}>
-            <Icon name="home" style={{marginRight: '10px'}}/>SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicent Pires - DF
+            <Icon name="home" style={{marginRight: '10px'}}/>SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
             </Cell>
           </Cell>
         </Grid>
