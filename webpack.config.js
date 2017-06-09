@@ -18,20 +18,16 @@ module.exports = {
     },
     {
       test: /\.css$/,
-      loader: "style-loader",
-    },
-    {
-      test: /\.css$/,
-      loader: "css-loader",
+      loader: ["style-loader", "css-loader"]
     },
     {
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
       loader: 'url-loader',
       options: {
-        limit: 10000
+        limit: 10000,
+	name: 'images/[name].[ext]'
       }
-    }
-    ]
+    }]
   },
   node: {fs: "empty"},
 }
