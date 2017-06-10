@@ -8,7 +8,9 @@ export default class ClientArea extends Component {
         return(
           <div className="client">
 	    <Grid  className="page_head client_head">
-	      <Cell col={12}><h1>ACOMPANHE SEUS PEDIDOS</h1></Cell>
+	      <Cell col={12}>
+	        <h1>ACOMPANHE SEUS PEDIDOS</h1>
+	      </Cell>
 	    </Grid>
    	    <Grid >
               <Cell col={6}>
@@ -16,7 +18,7 @@ export default class ClientArea extends Component {
 	      </Cell>
 	      <Cell col={6} className="cell_custom">
 	      	<Cell col={12}>
-		  <Comment />
+		  <Comment url="interlogex.com.br/areacliente"/>
 		</Cell>
               </Cell>
 	    </Grid>
