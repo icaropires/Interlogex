@@ -8,10 +8,12 @@ export default class MenuInterlogex extends React.Component {
     super(props);
     this.state = {'activeItem': "/"};
   }
+
   componentWillReceiveProps(){
     this.state = { activeItem: window.location.pathname};
     window.scroll(0,0);
   }
+
   componentWillMount(){
     this.state = { activeItem: window.location.pathname};
     window.scroll(0,0);
@@ -22,6 +24,7 @@ export default class MenuInterlogex extends React.Component {
         <Navigation>
             <Link className={this.state.activeItem === "/"?"selected":""} to="/">Home</Link>
             <Link to="/contato" className={this.state.activeItem === "/contato"?"selected":""}>Contatos</Link>
+	    <Link to="/areacliente" className={this.state.activeItem === "/areacliente"?"selected":""}>Área do Cliente</Link>
         </Navigation>
     );
   }
