@@ -117,7 +117,7 @@ export default class Contact extends React.Component {
         </Grid>
         <Grid >
           <Cell col={6}>
-            <h1>Entre em contato</h1>
+            <h1 id="contact">Entre em contato </h1>
             <ContactForm />
           </Cell>
           <Cell col={6} className="cell_custom">
@@ -146,7 +146,7 @@ export default class Contact extends React.Component {
                 <i className="mdi mdi-instagram mdi-24px" style={{marginRight: '10px'}} />
                 <Tooltip label="Perfil no Instagram" large><Link style={{textDecoration: "none", color: "inherit"}} target="_blank" to="http://instagram.com/interlogex">@interlogex</Link></Tooltip>
              </Cell>
-               <Cell col={12}>
+		       <Cell col={12}>
                  <Icon name="email" style={{marginRight: '10px'}} />
                  <Tooltip label="Envie-nos um email" large><Link style={{textDecoration: "none", color: "inherit"}} target='_top' to="mailto:interlogex@interlogex.com.br?Subject=Contato">interlogex@interlogex.com.br</Link></Tooltip>
                </Cell>
