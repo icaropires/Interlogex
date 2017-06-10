@@ -8,14 +8,13 @@ export default class Comment extends Component {
   render() {
     return (
       <div>
-        <h1>Avaliações</h1>
         <FacebookProvider appId="327229751024564" language='pt_BR'>
           <Comments 
-	    href={this.props.url}
-	    colorScheme="dark"
-	    numPosts={5}
-	    width="100%"
-	/>
+	        href={this.props.url}
+	        colorScheme="dark"
+	        numPosts={5}
+	        width="100%"
+	      />
         </FacebookProvider>
       </div>
     );

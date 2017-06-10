@@ -10,7 +10,7 @@ import {
 import Home from './Home';
 import About from './About';
 import ContactPage from './ContactPage';
-import ClientArea from './ClientArea';
+import ClientAreaPage from './ClientAreaPage';
 import NotFound from './NotFound';
 import logo from "../public/imagem/logo_cabecalho.png";
 import telefone from "../public/imagem/telefone.png";
@@ -38,7 +38,7 @@ const InterlogexContent = (
                 <Route exact path="/" component={Home} />
                 <Route exact path="/contato" component={ContactPage} />
                 <Route exact path="/quemsomos" component={About} />
-                <Route exact path="/areacliente" component={ClientArea} />
+                <Route exact path="/areacliente" component={ClientAreaPage} />
                 <Route component={NotFound} />
               </Switch>
             </Cell>

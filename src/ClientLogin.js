@@ -5,7 +5,6 @@ export default class ClientLogin extends Component {
     render(){
         return(
           <div>
-	    <h1>Login</h1>
             <form name="form" method="post" action="http://areacliente.sistemamotofrete.com.br/acesso.aspx"> 
               <input type="hidden" name="chave" value="Q4dSjBTfe48Asq7xCrEA3arLb9XuEN3L0N3cyu4dv8M=" />
               <Cell col={12}>
