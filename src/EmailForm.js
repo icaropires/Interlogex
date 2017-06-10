@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Grid, Cell, Icon,
-	        Textfield, Button, Spinner, Snackbar,
-		        Tooltip } from 'react-mdl';
-import ContactMap from './ContactMap';
-import 'mdi/css/materialdesignicons.min.css';
-import request from 'ajax-request';
+import { Grid, Cell, Textfield,
+	 Spinner, Snackbar } from 'react-mdl';
 
-export class ContactForm extends React.Component {
+export default class EmailForm extends React.Component {
   constructor(props){
     super(props);
     this.state = { forms: {}, is_send: false, snackbar: false };
@@ -108,62 +103,3 @@ export class ContactForm extends React.Component {
   }
 }
 
-export default class Contact extends React.Component {
-  render(){
-    return (
-      <div className="contato">
-        <Grid  className="page_head contact_head">
-          <Cell col={12}><h1>CONTATOS</h1></Cell>
-        </Grid>
-        <Grid >
-          <Cell col={6}>
-            <h1 id="contact">Entre em contato </h1>
-            <ContactForm />
-          </Cell>
-          <Cell col={6} className="cell_custom">
-            <Cell col={12}><h1>Telefones</h1></Cell>
-            <div className="card_contact">
-              <Cell col={12}>
-                <Icon name="phone"/>
-                <label className="ddd">(61)</label> 3554-5467
-              </Cell>
-              <Cell col={12}>
-                <Icon name="smartphone"/>
-                <label className="ddd">(61)</label> 99552-3590
-              </Cell>
-              <Cell col={12}>
-                <i className="mdi mdi-whatsapp mdi-24px" />
-                <label className="ddd">+55 61 </label>99552-3590
-              </Cell>
-            </div>
-            <Cell col={12}><h1>Mídias sociais</h1></Cell>
-            <Cell col={12}>
-              <Cell col={12}>
-                <i className="mdi mdi-facebook mdi-24px" style={{marginRight: '10px'}} />
-                <Tooltip label="Visite nossa página do Facebook" large><Link style={{textDecoration: "none", color: "inherit"}} target="_blank" to="http://facebook.com/interlogex">@interlogex</Link></Tooltip>
-             </Cell>
-	     <Cell col={12}>
-                <i className="mdi mdi-instagram mdi-24px" style={{marginRight: '10px'}} />
-                <Tooltip label="Perfil no Instagram" large><Link style={{textDecoration: "none", color: "inherit"}} target="_blank" to="http://instagram.com/interlogex">@interlogex</Link></Tooltip>
-             </Cell>
-		       <Cell col={12}>
-                 <Icon name="email" style={{marginRight: '10px'}} />
-                 <Tooltip label="Envie-nos um email" large><Link style={{textDecoration: "none", color: "inherit"}} target='_top' to="mailto:interlogex@interlogex.com.br?Subject=Contato">interlogex@interlogex.com.br</Link></Tooltip>
-               </Cell>
-             </Cell>
-            <Cell col={12}><h1>Endereço</h1></Cell>
-            <Cell col={12}>
-            <Icon name="home" style={{marginRight: '10px'}}/>SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
-            </Cell>
-          </Cell>
-        </Grid>
-        <Grid>
-          <Cell col={12}><h1 id="map">Localização no mapa</h1></Cell>
-          <Cell col={12} className="maps">
-          <ContactMap  />
-          </Cell>
-        </Grid>
-      </div>
-    );
-  }
-}

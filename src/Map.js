@@ -14,7 +14,7 @@ const GoogleMapContainer = withGoogleMap(props => (
   </GoogleMap>
 ));
 
-export default class ContactMap extends React.Component {
+export default class Map extends React.Component {
   render(){
     const defaultPosition = {lat: -15.799533, lng: -48.021679};
     const zoom = 12;
