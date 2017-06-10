@@ -31,7 +31,7 @@ export default class FooterInterlogex extends React.Component {
               <h1 className="mdl-mega-footer--heading mdl-mega-footer__heading" id="title">E-mails <Icon name="expand_more" id="arrow"/></h1>
               <FooterLinkList className="footer_list">
                 <Grid>
-                  <Cell col={12}><Icon name="email" style={{marginRight: "10px"}} /><Tooltip label="Envie-nos um e-mail" large><Link style={{textDecoration: "none", color: "inherit"}} to="mailto:interlogex@interlogex.com.br" target="_blank"> interlogex@interlogex.com.br</Link></Tooltip></Cell>
+                  <Cell col={12}><Icon name="email" style={{marginRight: "10px"}} /><Tooltip label="Envie-nos um e-mail" large><Link style={{textDecoration: "none", color: "inherit"}} to="/contatos"> interlogex@interlogex.com.br</Link></Tooltip></Cell>
                 </Grid> 
               </FooterLinkList>
             </FooterDropDownSection>
@@ -39,7 +39,7 @@ export default class FooterInterlogex extends React.Component {
               <h1 className="mdl-mega-footer--heading mdl-mega-footer__heading" id="title">Endereço <Icon name="expand_more" id="arrow"/></h1>
               <FooterLinkList className="footer_list">
                 <Grid>
-                  <Icon name="home" />SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
+                  <Icon name="home" /><Link style={{textDecoration: "none", color: "inherit"}} target='_self' to="/contato#map">SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF</Link>
                 </Grid>
               </FooterLinkList>
             </FooterDropDownSection>
