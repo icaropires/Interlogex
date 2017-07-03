@@ -8,11 +8,11 @@ import SocialMedias from './SocialMedias';
 export default class ContactInfo extends React.Component {
   render(){
     return (
-	  <div>
-	    <Phones />
-	    <SocialMedias />
-	    <Adress />
-	  </div>
+    <div>
+      <Phones />
+      <SocialMedias />
+      <Adress />
+    </div>
     );
   }
 }

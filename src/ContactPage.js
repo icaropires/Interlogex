@@ -11,8 +11,8 @@ export default class Contact extends React.Component {
       <div className="contato">
         <Grid  className="page_head contact_head">
           <Cell col={12}>
-	    <h1>CONTATOS</h1>
-	  </Cell>
+            <h1>CONTATOS</h1>
+          </Cell>
         </Grid>
         <Grid >
           <Cell col={6}>
@@ -20,13 +20,13 @@ export default class Contact extends React.Component {
             <EmailForm />
           </Cell>
           <Cell col={6} className="cell_custom">
-	    <ContactInfo />
+            <ContactInfo />
           </Cell>
         </Grid>
         <Grid>
           <Cell col={12}>
-	    <h1 id="map">Localização no mapa</h1>
-	  </Cell>
+            <h1 id="map">Localização no mapa</h1>
+          </Cell>
           <Cell col={12} className="maps">
             <Map />
           </Cell>

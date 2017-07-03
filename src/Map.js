@@ -21,10 +21,10 @@ export default class Map extends React.Component {
     return (
       <GoogleMapContainer
         containerElement={
-          <div style={{ height: "100%", minHeight: "400px" }} />
+          <div style={{ height: "100%", minHeight: "200px" }} />
         }
         mapElement={
-          <div style={{ height: "100%", minHeight: "400px" }} />
+          <div style={{ height: "100%", minHeight: "200px" }} />
         }
         zoom={zoom}
         defaultPosition={defaultPosition}
