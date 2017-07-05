@@ -1,9 +1,7 @@
 import React from 'react';
-import {Link, BrowserRouter} from 'react-router-dom';
-import {Card, CardTitle, CardText, CardActions,
-        Button, List, ListItem, ListItemContent
-        } from 'react-mdl';
-
+import { Link, BrowserRouter } from 'react-router-dom';
+import { Card, CardTitle, CardText, CardActions,
+        Button, List, ListItem, ListItemContent } from 'react-mdl';
 import header from '../public/imagem/header.png';
 import business from '../public/imagem/business.png';
 import negotiation from '../public/imagem/client_handle.jpg';
@@ -34,10 +32,10 @@ export default class Home extends React.Component {
         <CardHome image={business} title={"Um pouco sobre nós"} link={{url: '/quemsomos', text: 'Leia mais'}}>
           <div>
             <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.</p>
-	    <p>Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.</p>
-	    <p>Os princípios e valores que norteiam nosso trabalho são: <strong>justiça</strong>, <strong>retidão</strong> e <strong>ética</strong>.</p>
-	    <p><strong>Visão:</strong> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
-	    <p><strong>Missão:</strong> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
+	        <p>Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.</p>
+	        <p>Os princípios e valores que norteiam nosso trabalho são: <strong>justiça</strong>, <strong>retidão</strong> e <strong>ética</strong>.</p>
+	        <p><strong>Visão:</strong> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
+	        <p><strong>Missão:</strong> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
           </div>
         </CardHome>
 
