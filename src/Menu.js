@@ -22,9 +22,10 @@ export default class MenuInterlogex extends React.Component {
   render(){
     return (
         <Navigation>
-            <Link className={this.state.activeItem === "/"?"selected":""} to="/">Home</Link>
-            <Link to="/contato" className={this.state.activeItem === "/contato"?"selected":""}>Contatos</Link>
-	    <Link to="/areacliente" className={this.state.activeItem === "/areacliente"?"selected":""}>Área do Cliente</Link>
+          <Link className={this.state.activeItem === "/"?"selected":""} to="/">Home</Link>
+	      <Link to="/services" className={this.state.activeItem === "/services"?"selected":""}>Serviços</Link>
+          <Link to="/contato" className={this.state.activeItem === "/contato"?"selected":""}>Contatos</Link>
+	      <Link to="/areacliente" className={this.state.activeItem === "/areacliente"?"selected":""}>Área do Cliente</Link>
         </Navigation>
     );
   }
