@@ -4,15 +4,15 @@ import {Card, CardTitle, CardText, CardActions,
         Button, List, ListItem, ListItemContent
         } from 'react-mdl';
 
-import header from '../public/imagem/header.png';
-import business from '../public/imagem/business.png';
-import negotiation from '../public/imagem/client_handle.jpg';
+import services from '../public/imagem/our_service.jpg';
+import business from '../public/imagem/who_we_are.jpg';
+import negotiation from '../public/imagem/client_handle_2.jpg';
 
 // <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
 class CardHome extends React.Component {
   render(){
     return (
-        <Card shadow={5} className="card_layout" style={{height: '92%'}}>
+        <Card shadow={5} id="card_layout" className="card_layout" style={{height: '780px'}}>
           <div className="card_head">
             <img src={this.props.image} />
           </div>
@@ -41,7 +41,7 @@ export default class Home extends React.Component {
           </div>
         </CardHome>
 
-        <CardHome image={header} title={"Nossos Serviços"}  link={{url: '/servicos', text: 'Veja mais serviços'}}>
+        <CardHome image={services} title={"Nossos Serviços"}  link={{url: '/servicos', text: 'Veja mais serviços'}}>
           <div>
             Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.
             <br />

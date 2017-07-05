@@ -56,6 +56,15 @@ body{
   #arrow{
     display: block;
   }
+  #card_layout{
+    min-width: 350px;
+  }
+
+}
+@media only screen and (max-width: 560px) {
+  #card_layout{
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .pre_header > img, .pre_header > div > h1{
@@ -92,23 +101,28 @@ body{
 #card_head_title{
   background: #152635;
   color: white;
+  text-shadow: -1px 0 #152635, 0 1px #152635, 1px 0 #152635, 0 -1px #152635;
 }
 
 .card_head > img{
   height: 320px;
-  max-width: 320px;
+  max-width: 100%;
 }
 
 .card_layout{
   position: relative;
   float: left;
-  margin-right: 100px;
+  margin-right: 50px;
   margin-top: 50px;
   padding: 5px;
 }
 
 .card_layout:last-child{
   margin-right: unset;
+}
+
+#card_layout {
+  min-width: 450px;
 }
 
 @media only screen and (max-width: 910px) {
@@ -131,6 +145,12 @@ body{
   }
   .separator{
     margin-top: 270px;
+  }
+  .card_layout{
+    margin-right: 10px;
+  }
+  #card_layout{
+    min-width: 300px;
   }
 }
 
