@@ -3,73 +3,35 @@ import {Card, CardTitle, CardText, CardActions,
         Button, List, ListItem, ListItemContent
         } from 'react-mdl';
 
-class CardServices extends React.Component {
-  render(){
-    return (
-        <Card shadow={5} className="card_layout" style={{height: '92%'}}>
-          <div className="card_head">
-            <img src={this.props.image} />
-          </div>
-          <CardTitle id="card_head_title">{this.props.title}</CardTitle>
-          <CardText style={{minHeight: '50%'}}>
-            {this.props.children}
-          </CardText>
-          <CardActions border>
-          </CardActions>
-        </Card>
-    );
-  }
-}
+import service_base from '../public/imagem/our_service_2.jpg';
+import controll from '../public/imagem/have_controll.jpg';
+import schedule from '../public/imagem/schedule.jpg';
+import togo from '../public/imagem/to_go_2.jpg';
 
 export default class Services extends Component {
     render() {
 		return(
 			<div>
-				<CardServices>
-					<CardTitle style={{color: '#000', height: '85px'}}>Planos de contratação</CardTitle>
-					<List style={{padding: '0'}}>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="">Entregas Simples</ListItemContent>
-					  </ListItem>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="">Por hora</ListItemContent>
-					  </ListItem>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="">Mensalmente</ListItemContent>
-					  </ListItem>
-					</List>
-				</CardServices>
-
-				<CardServices>
-					<CardTitle style={{color: '#000', height: '85px'}}>Vantagens em nos contratar</CardTitle>
-					<List style={{padding: '0'}}>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="location_on">Rastreamento da carga</ListItemContent>
-					  </ListItem>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="assignment_turned_in">Confirmação de entrega</ListItemContent>
-					  </ListItem>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="map">Coleta e entrega no local desejado</ListItemContent>
-					  </ListItem>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="schedule">Coletas programadas com flexibilidade de horários</ListItemContent>
-					  </ListItem>
-					</List>
-				</CardServices>
-
-				<CardServices>
-					<CardTitle style={{color: '#000', height: '85px'}}>Tipos de veículos</CardTitle>
-					<List style={{padding: '0'}}>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="">Utilitário</ListItemContent>
-					  </ListItem>
-					  <ListItem style={{color: '#757575', padding:'0'}}>
-						<ListItemContent icon="">Moto</ListItemContent>
-					  </ListItem>
-					</List>
-				</CardServices>
-			</div>
+        <h1>Serviços</h1>
+        Nós fornecemos vários tipos de serviços além de uma simples entrega de pacotes, conheça abaixo um pouco mais.
+        <div><img src={service_base} style={{float: 'left'}} />
+          <h2>Coleta e entrega</h2>
+          Economize seu tempo e fique tranquilo quando desejar encomendar nossos serviços, pois nossa equipe se responsabiliza pela coleta e entrega dos pacotes nos locais combinados.
+        </div>
+        <div>
+          <h2>Programe as entregas</h2>
+           Economize seu tempo, e tenha garantida entregas nos horários que desejar. Nós agendamos as coletas de pacotes, no horário que desejar e garantimos que seja entregue logo após.<img src={schedule} style={{float: 'right'}} />
+        </div>
+        <div>
+          <h2>Tenha o controle</h2>
+          Fornecemos um serviço de acompanhamento dos serviços em nossa página web, que possibilita que você acompanhe as etapas até que o serviço seja concluido. <br /><img src={controll} style={{float: 'left'}} />
+          Saiba inclusive, quando o pacote chegou a sua destinação final, pois confirmamos a entrega.
+        </div>
+        <div>
+          <h2>Comodidade</h2>
+          <img src={togo} style={{float: 'right'}} />Levamos as encomendas onde precisam ser levadas. Seja ao cartório, a alguém que precise assinar, até que seje entregue a sua destinação final.
+        </div>
+      </div>
 		);
 	}
 }

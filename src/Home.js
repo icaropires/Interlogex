@@ -5,6 +5,7 @@ import {Card, CardTitle, CardText, CardActions,
         } from 'react-mdl';
 import services from '../public/imagem/our_service.jpg';
 import business from '../public/imagem/who_we_are.jpg';
+import business_values from '../public/imagem/business.jpg';
 import negotiation from '../public/imagem/client_handle_2.jpg';
 
 // <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
@@ -30,22 +31,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <CardHome image={business} title={"Um pouco sobre nós"} link={{url: '/quemsomos', text: 'Leia mais'}}>
-          <div>
-            <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.</p>
-            <p>Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.</p>
-          </div>
-        </CardHome>
-
-        <CardHome image={business} title={"O negócio"} link={{url: '/quemsomos', text: 'Leia mais'}}>
-          <div>
-            <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> </p>
-            <p><strong>Valores: </strong>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
-            <p><strong>Visão:</strong> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
-            <p><strong>Missão:</strong> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
-            <p>Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
-          </div>
-        </CardHome>
 
         <CardHome image={services} title={"Nossos Serviços"}  link={{url: '/servicos', text: 'Veja mais serviços'}}>
           <div>
@@ -77,6 +62,24 @@ export default class Home extends React.Component {
             <p>Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.</p>
           </div>
         </CardHome>
+
+        <CardHome image={business_values} title={"Um pouco sobre nós"} link={{url: '/quemsomos', text: 'Leia mais'}}>
+          <div>
+            <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.</p>
+            <p>Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.</p>
+            <p>Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
+          </div>
+        </CardHome>
+
+        <CardHome image={business} title={"O negócio"} link={{url: '/quemsomos', text: 'Leia mais'}}>
+          <div>
+            <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> </p>
+            <p><strong>Valores: </strong>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
+            <p><strong>Visão:</strong> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
+            <p><strong>Missão:</strong> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
+          </div>
+        </CardHome>
+
 
       </div>
     );
