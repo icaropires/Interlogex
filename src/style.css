@@ -52,33 +52,44 @@ body{
   top: 0px;
   font-size: 14px;
 }
-@media only screen and (max-width: 759px) {
-  #arrow{
-    display: block;
-  }
-  #card_layout{
-    min-width: 350px;
-  }
+
+.service_content{
+  width: 80%;
+  min-height: 140px;
+  overflow: hidden;
+
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-align: justify;
+  text-justify: inter-word;
 
 }
-@media only screen and (max-width: 560px) {
-  #card_layout{
-    width: 100%;
-  }
+
+.service_content:nth-child(odd) img{
+  margin: 0px 0px 20px 10px;
+  float: right;
 }
-@media only screen and (max-width: 1024px) {
-  .pre_header > img, .pre_header > div > h1{
-    max-width: 400px;
-    margin-left: 40px;
-  }
-  .separator{
-    display: block;
-  }
-  #content{
-    margin-top: 300px;
-    margin-left: 20px;
-  }
+.service_content:nth-child(even) img{
+  margin: 0px 20px 20px 0px;
+  float: left;
 }
+.service h2{
+  color: #872f54;
+  font-size: 30px;
+}
+
+#service_container{
+  width: 100%;
+  padding: 2%;
+}
+#service_container:nth-child(even){
+  background: #f3f3f3;
+}
+
 
 .company_name{
   color: white;
@@ -125,36 +136,7 @@ body{
   min-width: 450px;
 }
 
-@media only screen and (max-width: 910px) {
-  .card_layout{
-    margin-bottom: 50px;
-    margin-right: 60px;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .pre_header > img{
-    margin-left: 20px;
-  }
-  .pre_header > img.phone{
-    position: relative;
-    margin-top: 10px;
-  }
-  .pre_header > div > h1 {
-    display: none;
-  }
-  .separator{
-    margin-top: 270px;
-  }
-  .card_layout{
-    margin-right: 10px;
-  }
-  #card_layout{
-    min-width: 300px;
-  }
-}
-
-.contato h1, .client h1{
+.contato h1, .client h1, .service h1{
   color: #872f54;
   font-size: 40px;
 }
@@ -198,4 +180,70 @@ body{
 .maps{
   min-width:400px;
   min-height: 400px;
+}
+
+@media only screen and (max-width: 910px) {
+  .card_layout{
+    margin-bottom: 50px;
+    margin-right: 60px;
+  }
+
+}
+
+@media only screen and (max-width: 760px) {
+
+  .pre_header > img{
+    margin-left: 20px;
+  }
+  .pre_header > img.phone{
+    position: relative;
+    margin-top: 10px;
+  }
+  .pre_header > div > h1 {
+    display: none;
+  }
+  .separator{
+    margin-top: 270px;
+  }
+  .card_layout{
+    margin-right: 10px;
+  }
+  #card_layout{
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 759px) {
+  #arrow{
+    display: block;
+  }
+  #card_layout{
+    min-width: 350px;
+  }
+
+}
+@media only screen and (max-width: 560px) {
+  #card_layout{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .service_content{
+    width: inherit;
+  }
+  #service_container{
+    padding: 1%;
+  }
+
+  .pre_header > img, .pre_header > div > h1{
+    max-width: 400px;
+    margin-left: 40px;
+  }
+  .separator{
+    display: block;
+  }
+  #content{
+    margin-top: 300px;
+    margin-left: 20px;
+  }
 }

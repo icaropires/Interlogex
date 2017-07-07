@@ -40,7 +40,7 @@ const InterlogexContent = (
                 <Route exact path="/contato" component={ContactPage} />
                 <Route exact path="/quemsomos" component={About} />
                 <Route exact path="/areacliente" component={ClientAreaPage} />
-                <Route exact path="/services" component={Services} />
+                <Route exact path="/servicos" component={Services} />
                 <Route component={NotFound} />
               </Switch>
             </Cell>
