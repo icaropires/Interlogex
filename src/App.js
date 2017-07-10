@@ -1,17 +1,20 @@
 import React from 'react';
 import { Route, Switch} from 'react-router';
 import {BrowserRouter, Link} from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {
    Icon, Layout, Header, HeaderRow,
    Drawer, Content, Grid, Cell,
    Card, CardTitle, CartText, CardActions
    } from 'react-mdl';
+import AppBar from 'material-ui/AppBar';
 
 import Home from './Home';
 import About from './About';
 import ContactPage from './ContactPage';
 import ClientAreaPage from './ClientAreaPage';
 import NotFound from './NotFound';
+import highway from "../public/imagem/high_way.jpg";
 import logo from "../public/imagem/logo_cabecalho.png";
 import telefone from "../public/imagem/telefone.png";
 import MaterialLayout from 'react-mdl';
@@ -22,49 +25,44 @@ import Services from './Services';
 import './style.css';
 import 'mdi/css/materialdesignicons.min.css';
 const PreHeader = (
-        <div className="pre_header">
-          <img src={logo} className="logo" />
-          <img src={telefone} className="phone" />
-          <div>
-            <h1>O jeito certo de fazer entregas!</h1>
-          </div>
-          <div className="separator" />
-        </div>
+  <div className="pre_header">
+    <img src={highway} />
+    <div>
+      <h1>O jeito certo de fazer entregas!</h1>
+    </div>
+  </div>
 );
 const InterlogexContent = (
-        <Content id="content">
-          <Grid>
-            <Cell col={12}>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/contato" component={ContactPage} />
-                <Route exact path="/quemsomos" component={About} />
-                <Route exact path="/areacliente" component={ClientAreaPage} />
-                <Route exact path="/servicos" component={Services} />
-                <Route component={NotFound} />
-              </Switch>
-            </Cell>
-          </Grid>
-        </Content>
+  <Content id="content">
+    <Grid>
+      <Cell col={12}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/contato" component={ContactPage} />
+          <Route exact path="/quemsomos" component={About} />
+          <Route exact path="/areacliente" component={ClientAreaPage} />
+          <Route exact path="/servicos" component={Services} />
+          <Route component={NotFound} />
+        </Switch>
+      </Cell>
+    </Grid>
+  </Content>
 );
 
-// <img src={deliver_toy}></img>
 export default class App extends React.Component {
   render(){
     return (
     <BrowserRouter>
-      <Layout style={{height: 'unset', minWidth: '420px'}}>
+      <MuiThemeProvider>
+        <div>
         {PreHeader}
-        <Header scroll style={{backgroundColor: '#152635', marginTop: '250px'}}>
-            <MenuInterlogex />
-        </Header>
-        <Drawer title="Interlogex">
-          <MenuInterlogex />
-        </Drawer>
+        <AppBar title="Interlogex" />
+        <MenuInterlogex />
         {InterlogexContent}
         <FooterInterlogex />
 
-      </Layout>
+      </div>
+      </MuiThemeProvider>
     </BrowserRouter>
     );
   }
