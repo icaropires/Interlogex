@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Cell, Textfield,
 	 Spinner, Snackbar } from 'react-mdl';
+import request from 'ajax-request';
 
 export default class EmailForm extends React.Component {
   constructor(props){
@@ -39,9 +40,13 @@ export default class EmailForm extends React.Component {
           "Content-Type": "application/json",
         },
       }, function(err, response, body){
-        if(err){ console.error(err)}
+        if(err || response.statusCode >= 400){
+          console.error(err);
+          alert("Ocorreu um problema ao enviar o e-mail.\n\nTente novamente ou contate-nos pelo telefone ( 61 ) 3554-5467");
+          this.setState({is_send: false, snackbar: true});
+          this.validate(form, false);
+        }
         else if(response.statusCode >= 200 && response.statusCode < 300){
-          console.log(body);
           form.email.value = "";
           form.name.value = "";
           form.subject.value = "";

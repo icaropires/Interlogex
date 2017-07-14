@@ -15,22 +15,21 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public'));
 app.use(logger('dev'));
 Mailer.extend(app, {
-  from: 'contato@interlogex.com.br',
+  from: 'interlogex@interlogex.com.br',
   host: 'smtp.zoho.com',
   secureConnection: true,
   port: 465,
   transportMethod: 'SMTP',
   auth: { 
-    user: 'contato@interlogex.com.br',
+    user: 'interlogex@interlogex.com.br',
     pass: process.env.PSWIGX
   }
 });
-console.log(process.env.PSWIGX)
 app.post('/contato', function(request, response, next){
   var message = "";
   app.mailer.send('email',{
     from: request.body.email,
-    to: 'contato@interlogex.com.br',
+    to: 'interlogex@interlogex.com.br',
     subject: `Contato: ${request.body.subject}`,
     title: request.body.subject,
     name: request.body.name,
