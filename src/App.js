@@ -58,11 +58,11 @@ const InterlogexContent = (
 
 export default class App extends React.Component {
   render(){
+        //{PreHeader}
     return (
     <BrowserRouter>
       <MuiThemeProvider>
         <div>
-        {PreHeader}
         <MenuInterlogex />
         {InterlogexContent}
         <FooterInterlogex />

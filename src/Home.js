@@ -3,6 +3,7 @@ import {Link, BrowserRouter} from 'react-router-dom';
 import {Card, CardTitle, CardText, CardActions,
         Button, List, ListItem, ListItemContent
         } from 'react-mdl';
+import { ArrowLeft, ArrowRight, Dots, Slides } from 'react-infinite-slide';
 import services from '../public/imagem/our_service.jpg';
 import business from '../public/imagem/who_we_are.jpg';
 import business_values from '../public/imagem/business.jpg';
@@ -32,6 +33,25 @@ export default class Home extends React.Component {
     return (
       <div>
 
+    <Slides arrowLeft={ArrowLeft}
+            arrowRight={ArrowRight}
+            dots={Dots}
+            duration={300}
+            autoplay
+            delay={1000}>
+     <div className="one">
+      <img style={{height: "100%"}} src={services} />
+     </div>
+     <div className="two">
+      <img style={{height: "100%"}} src={negotiation} />
+    </div>
+     <div className="three"> 
+     <img style={{height: "100%"}} src={business_values} />
+      </div>
+     <div className="four">
+      <img style={{height: "100%"}} src={business_values} />
+    </div>
+   </Slides>
         <CardHome image={services} title={"Nossos Serviços"}  link={{url: '/servicos', text: 'Veja mais serviços'}}>
           <div>
             Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.

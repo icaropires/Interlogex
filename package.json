@@ -39,6 +39,7 @@
     "react-dom": "^15.5.4",
     "react-facebook": "^4.0.13",
     "react-google-maps": "^7.0.0",
+    "react-infinite-slide": "^0.1.2",
     "react-mdl": "^1.10.2",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
