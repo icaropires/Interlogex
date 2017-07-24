@@ -7,6 +7,7 @@ module.exports = {
     path: path.join(__dirname, "public", "assets"), 
     filename: "bundle.js"
   },
+  devtool: 'eval',
   module: {
     loaders: [{
       test: /\.js$/,

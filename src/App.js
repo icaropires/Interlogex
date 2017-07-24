@@ -2,12 +2,19 @@ import React from 'react';
 import { Route, Switch} from 'react-router';
 import {BrowserRouter, Link} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+import IconMenu from 'material-ui/IconMenu';
+import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import Menu from 'material-ui/Menu';
+
 import {
    Icon, Layout, Header, HeaderRow,
    Drawer, Content, Grid, Cell,
    Card, CardTitle, CartText, CardActions
    } from 'react-mdl';
-import AppBar from 'material-ui/AppBar';
 
 import Home from './Home';
 import About from './About';
@@ -56,7 +63,6 @@ export default class App extends React.Component {
       <MuiThemeProvider>
         <div>
         {PreHeader}
-        <AppBar title="Interlogex" />
         <MenuInterlogex />
         {InterlogexContent}
         <FooterInterlogex />

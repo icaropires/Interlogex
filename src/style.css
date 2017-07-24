@@ -1,9 +1,70 @@
 body{
   min-width: 420px;
 }
+
+.mobile{
+  display: none;
+}
+.mobile>div{
+  position:relative;
+  float:left;
+}
+.mobile>h4{
+  margin-left: 10%;
+  position: relative;
+  margin-top:10px;
+  line-height: 48px;
+}
+.desktop > a > img{
+  position: relative;
+  float: left;
+  height: 48px;
+  margin-left: 5%;
+}
+.wrapper-menu{
+  height: 52px;
+  position: relative;
+  float: left;
+  width: 187px;
+}
+.menu:hover{
+  border-bottom: 3px solid blue;
+  transition: all 200ms;
+}
+.menu:active{
+  background-color: #ED8600;
+  border: 1px 0px 1px 0px;
+  transition: all 400ms;
+}
+.menuapp{
+  border-bottom: 1px solid #872f54;
+  width: 100%;
+  position: absolute;
+}
+.menu{
+  color: #030303;
+  position: absolute;
+  min-height: 48px;
+  line-height: 48px;
+  background: #fff;
+  font-size: 16px;
+  width: 100%;
+}
+.menu>span{
+  position: absolute;
+  left:20%;
+  overflow: hidden;
+  white-space: normal;
+}
+a:link, a:hover, a:active, a:visited{
+  text-decoration: none;
+}
+
 .selected{
   background-color: #ED8600;
 }
+
+
 .pre_header img{
   height: 250px;
   width: 100%;
@@ -184,6 +245,15 @@ body{
   }
 }
 @media only screen and (max-width: 1024px) {
+  .menuapp{
+    border-top: solid 1px black;
+  }
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
   .service_content{
     width: inherit;
   }
@@ -192,7 +262,7 @@ body{
   }
 
   #content{
-    margin-top: 300px;
+    margin-top:40px;
     margin-left: 20px;
   }
 }
