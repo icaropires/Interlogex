@@ -40,9 +40,9 @@ const PreHeader = (
   </div>
 );
 const InterlogexContent = (
-  <Content id="content">
-    <Grid>
-      <Cell col={12}>
+  <div>
+    <div>
+      <div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/contato" component={ContactPage} />
@@ -51,9 +51,9 @@ const InterlogexContent = (
           <Route exact path="/servicos" component={Services} />
           <Route component={NotFound} />
         </Switch>
-      </Cell>
-    </Grid>
-  </Content>
+      </div>
+    </div>
+  </div>
 );
 
 export default class App extends React.Component {

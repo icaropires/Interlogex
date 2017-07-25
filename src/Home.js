@@ -31,27 +31,50 @@ class CardHome extends React.Component {
 export default class Home extends React.Component {
   render() {
     return (
-      <div>
-
-    <Slides arrowLeft={ArrowLeft}
+<div>
+  <Slides arrowLeft={ArrowLeft}
             arrowRight={ArrowRight}
             dots={Dots}
             duration={300}
-            autoplay
-            delay={1000}>
-     <div className="one">
-      <img style={{height: "100%"}} src={services} />
-     </div>
-     <div className="two">
-      <img style={{height: "100%"}} src={negotiation} />
-    </div>
-     <div className="three"> 
-     <img style={{height: "100%"}} src={business_values} />
+            delay={3000}
+            width="100%">
+    <div className="slide-card">
+      <div className="slide-image">
+        <h2>Descubra nossos serviços</h2>
+        <img  src={services} />
       </div>
-     <div className="four">
-      <img style={{height: "100%"}} src={business_values} />
+      <div className="slide-text">
+        Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.
+      </div>
     </div>
-   </Slides>
+    <div className="slide-card">
+      <div className="slide-image">
+        <h2>Relacionamento com os clientes</h2>
+        <img  src={negotiation} />
+      </div>
+      <div className="slide-text">
+        Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.
+      </div>
+    </div>
+    <div className="slide-card">
+      <div className="slide-image">
+        <h2>Descubra quem somos</h2>
+        <img  src={business_values} />
+      </div>
+      <div className="slide-text">
+        Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.
+      </div>
+    </div>
+    <div className="slide-card">
+      <div className="slide-image">
+        <h2>Saiba como nós pensamos</h2>
+        <img  src={business} />
+      </div>
+      <div className="slide-text">
+        A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> 
+      </div>
+    </div>
+  </Slides>
         <CardHome image={services} title={"Nossos Serviços"}  link={{url: '/servicos', text: 'Veja mais serviços'}}>
           <div>
             Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.
