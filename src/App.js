@@ -17,7 +17,6 @@ import {
    } from 'react-mdl';
 
 import Home from './Home';
-import About from './About';
 import ContactPage from './ContactPage';
 import ClientAreaPage from './ClientAreaPage';
 import NotFound from './NotFound';
@@ -31,38 +30,36 @@ import Services from './Services';
 
 import './style.css';
 import 'mdi/css/materialdesignicons.min.css';
+
 const PreHeader = (
   <div className="pre_header">
     <img src={highway} />
-    <div>
-      <h1>O jeito certo de fazer entregas!</h1>
+    <div className="pre_header_text">
+      Somos o jeito certo de fazer entrega!<br />
+      Ligue já! (61) 3554-5467
     </div>
   </div>
 );
 const InterlogexContent = (
-  <div>
-    <div>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/contato" component={ContactPage} />
-          <Route exact path="/quemsomos" component={About} />
-          <Route exact path="/areacliente" component={ClientAreaPage} />
-          <Route exact path="/servicos" component={Services} />
-          <Route component={NotFound} />
-        </Switch>
-      </div>
+    <div className="container">
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/contato" component={ContactPage} />
+        <Route exact path="/areacliente" component={ClientAreaPage} />
+        <Route exact path="/servicos" component={Services} />
+        <Route component={NotFound} />
+      </Switch>
     </div>
-  </div>
 );
 
 export default class App extends React.Component {
   render(){
-        //{PreHeader}
+        //
     return (
     <BrowserRouter>
       <MuiThemeProvider>
         <div>
+        {PreHeader}
         <MenuInterlogex />
         {InterlogexContent}
         <FooterInterlogex />

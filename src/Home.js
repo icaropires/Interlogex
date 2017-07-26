@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link, BrowserRouter} from 'react-router-dom';
-import {Card, CardTitle, CardText, CardActions,
-        Button, List, ListItem, ListItemContent
+import Divider from 'material-ui/Divider';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
+import {List, ListItem, ListItemContent
         } from 'react-mdl';
 import { ArrowLeft, ArrowRight, Dots, Slides } from 'react-infinite-slide';
 import services from '../public/imagem/our_service.jpg';
@@ -13,17 +15,38 @@ import negotiation from '../public/imagem/client_handle_2.jpg';
 class CardHome extends React.Component {
   render(){
     return (
-        <Card shadow={5} id="card_layout" className="card_layout" style={{height: '780px'}}>
+        <div id="card_layout" className="card_layout" style={{height: '780px'}}>
           <div className="card_head">
             <img src={this.props.image} />
           </div>
-          <CardTitle id="card_head_title">{this.props.title}</CardTitle>
-          <CardText style={{minHeight: '50%'}}>
+          <div id="card_head_title">{this.props.title}</div>
+          <div style={{minHeight: '50%'}}>
             {this.props.children}
-          </CardText>
-          <CardActions border>
-          </CardActions>
-        </Card>
+          </div>
+        </div>
+    );
+  }
+}
+class CardService extends React.Component {
+  render(){
+    return (
+      <Card>
+        <CardHeader
+          title="Motoboy"
+          subtitle="Contrato exclusivo"
+        />
+        <CardMedia
+          overlay={<CardTitle title="Motoboy" subtitle="Contrato exclusivo" />}
+    >
+          <img src="https://blog.loggi.com/wp-content/uploads/2014/08/mensageiros3.jpg" alt="" />
+        </CardMedia>
+        <CardText>
+          Contrate um de nossos motoboys de forma exclusiva! Recrute-o por 1 dia, 1 semana ou o tempo que necessitar!
+        </CardText>
+    <CardActions>
+      <FlatButton label="Action1" />
+    </CardActions>
+  </Card>
     );
   }
 }
@@ -37,7 +60,8 @@ export default class Home extends React.Component {
             dots={Dots}
             duration={300}
             delay={3000}
-            width="100%">
+            width="100%"
+            style={{marginLeft: "0px"}}>
     <div className="slide-card">
       <div className="slide-image">
         <h2>Descubra nossos serviços</h2>
@@ -75,6 +99,16 @@ export default class Home extends React.Component {
       </div>
     </div>
   </Slides>
+  <Divider />
+  <h2>Serviços</h2>
+  <div className="card-wrapper">
+    <div className="card-item">
+      <CardService />
+    </div>
+    <div className="card-item">
+    </div>
+  </div>
+  <Divider />
         <CardHome image={services} title={"Nossos Serviços"}  link={{url: '/servicos', text: 'Veja mais serviços'}}>
           <div>
             Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.
