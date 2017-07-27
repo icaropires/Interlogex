@@ -1,5 +1,11 @@
 body{
   min-width: 420px;
+  background-image: url("http://www.casadopapeldeparede.com.br/wp-content/uploads/2013/04/03967-901.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+body:after{
+  opacity: 0.5;
 }
 
 .mobile{
@@ -34,6 +40,7 @@ body{
   transition: all 400ms;
 }
 .menuapp{
+  background: #fff;
   border-bottom: 1px solid #872f54;
   width: 100%;
   min-height: 55px;
@@ -86,12 +93,27 @@ body{
   position: relative;
   float: left;
   margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.card-wrapper{}
+.card-item:last-child{
+  margin-right: 0px;
+}
+
+.card-wrapper{overflow: auto;}
 a:link, a:hover, a:active, a:visited{
   text-decoration: none;
 }
 
+.home-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 33px;
+  min-height: 39px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  margin-top:20px;
+}
 .selected{
   background-color: #ED8600;
 }
@@ -250,12 +272,22 @@ a:link, a:hover, a:active, a:visited{
   min-width:400px;
   min-height: 400px;
 }
+.divider{
+  width: 100%;
+  margin: 50px 0px 50px 0px;
+}
+.divider:first-child{
+  margin-top: 0px;
+}
+.divider:last-child{
+  margin-bottom: 0px;
+}
 
 .container{
   margin-left: 5%;
   margin-right: 5%;
   min-width: 320px;
-  background: green;
+  background: #fff;
 }
 .container div{
   margin-left: 0px;
