@@ -12,6 +12,7 @@ import services from '../public/imagem/our_service.jpg';
 import business from '../public/imagem/who_we_are.jpg';
 import business_values from '../public/imagem/business.jpg';
 import negotiation from '../public/imagem/client_handle_2.jpg';
+import interlogexLogo from '../public/imagem/logo2.png';
 
 // <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
 class CardHome extends React.Component {
@@ -71,11 +72,16 @@ export default class Home extends React.Component {
               style={{marginLeft: "0px"}}>
       <div className="slide-card">
         <div className="slide-image">
+          <Link to="/contato#map"><img src={interlogexLogo} style={{height: '100%'}}/></Link>
+        </div>
+      </div>
+      <div className="slide-card">
+        <div className="slide-image">
           <h2>Descubra nossos serviços</h2>
           <img  src={services} />
         </div>
         <div className="slide-text">
-          Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás.
+          Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás. <br /><Link to="#service">V</Link>
         </div>
       </div>
       <div className="slide-card">
@@ -84,7 +90,7 @@ export default class Home extends React.Component {
           <img  src={negotiation} />
         </div>
         <div className="slide-text">
-          Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.
+          Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.<br /><Link to="#client">V</Link>
         </div>
       </div>
       <div className="slide-card">
@@ -93,7 +99,7 @@ export default class Home extends React.Component {
           <img  src={business_values} />
         </div>
         <div className="slide-text">
-          Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.
+          Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal. <br /><Link to="#about">V</Link>
         </div>
       </div>
       <div className="slide-card">
@@ -102,14 +108,14 @@ export default class Home extends React.Component {
           <img  src={business} />
         </div>
         <div className="slide-text">
-          A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> 
+          A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong><br /><Link to="#about-business">V</Link>
         </div>
       </div>
     </Slides>
   </div>
   <Divider />
   <div className="divider">
-    <div className="home-title">Serviços</div>
+    <div className="home-title" id="service"><span>Serviços</span></div>
     <div className="card-wrapper">
       <div className="card-item">
         <CardService
@@ -159,27 +165,32 @@ export default class Home extends React.Component {
   </div>
   <Divider />
   <div className="divider">
-    <div className="home-title">Relacionamento com os clientes</div>
+    <div className="home-title" id="client"><span>Relacionamento com os clientes</span></div>
     <div>
-      <Paper style={{marginLeft: '20%', height: "100px",width: '300px', textAlign: 'center'}} zDepth={4}>
-        <i>"Com a interlogex, eu conseguir ganhar tempo, pois não precisei esperar em filas de banco. O próprio entregador foi e resolveu pra mim" - <b>Cliente Anônimo</b></i>
-      </Paper>
       <p>Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.</p>
       <p>Acreditamos que a melhor propaganda será a indicação dos nossos serviços.</p>
-      <h2>Veja o que os clientes falam na página do <Link to="https://facebook.com/interlogex">Facebook</Link></h2>
+      <Paper className="home-paper" style={{marginLeft: "10%"}} zDepth={4}>
+        <i>"Com a interlogex, eu conseguir ganhar tempo, pois não precisei esperar em filas de banco. O próprio entregador foi e resolveu pra mim" - <b>Cliente Anônimo</b></i>
+      </Paper>
       <p>Não abrimos mão de nossos valores e assim a cada dia construímos uma empresa que cumpre suas obrigações com os clientes, com os colaboradores e com a sociedade.</p>
+      <Divider />
+      <div className="home-subtitle">Os clientes</div>
+      <span>Veja o que os clientes falam na página do <Link to="https://facebook.com/interlogex">Facebook</Link></span>
+      <Divider />
       <p>Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.</p>
+      <Link to="/contato">Entre em contato</Link>
     </div>
   </div>
   <Divider />
   <div className="divider">
-      <div className="home-title">Um pouco sobre nós</div>
+      <div className="home-title" id="about"><span>Um pouco sobre nós</span></div>
           <div>
             <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.</p>
             <p>Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.</p>
             <p>Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
           </div>
-          <div>
+          <div id="about-business">
+            <div className="home-subtitle">Visão de negócio</div>
             <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> </p>
             <Tabs>
               <Tab label="Valores">

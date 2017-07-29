@@ -35,7 +35,7 @@ export default class FooterInterlogex extends React.Component {
                   <div>
                     <Icon name="email" style={{marginRight: "10px"}} />
                     <Tooltip label="Envie-nos um e-mail" large>
-                      <Link style={{textDecoration: "none", color: "inherit"}} to="/contato#contact" target="_self">
+                      <Link style={{textDecoration: "none", color: "inherit"}} to="/contato#contact">
                         interlogex@interlogex.com.br
                       </Link>
                     </Tooltip>
@@ -52,7 +52,7 @@ export default class FooterInterlogex extends React.Component {
                 <div>
                   <Icon name="home" />
                   <Tooltip label="Nos veja no mapa!" large>
-                    <Link style={{textDecoration: "none", color: "inherit"}} target="_self" to="/contato#map">
+                    <Link style={{textDecoration: "none", color: "inherit"}} to="/contato#map">
                       SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
                     </Link>
                   </Tooltip>

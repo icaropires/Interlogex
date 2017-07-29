@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import {Menu, MenuItem, IconMenu, IconButton} from 'material-ui';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
@@ -22,15 +23,24 @@ export default class MenuInterlogex extends React.Component {
     return urls_name[this.state.activeItem];
   }
 
-   componentWillReceiveProps(){
+  componentWillReceiveProps(){
     this.setState({ activeItem: window.location.pathname});
-    window.scroll(0,0);
   }
-
   componentWillMount(){
     this.setState({ activeItem: window.location.pathname});
-    window.scroll(0,0);
   }
+
+  componentDidUpdate(){this.handleHash();}
+  handleHash(){
+    const id = window.location.hash;
+    if(id !== ''){
+      const element = document.querySelector(id);
+      element.scrollIntoView();
+    } else {
+      window.scroll(0,0);
+    }
+  }
+
 
 
   render(){
