@@ -69,7 +69,6 @@ body:after{
 }
 .slide-image > h2{
   position: absolute;
-  bottom: 40px;
   background: rgba(0, 0, 0, 0.47);
   color: white;
   width: 80%;
@@ -78,31 +77,61 @@ body:after{
 }
 
 .slide-image > img{
-  width: 100%;
+  height: 100%;
 }
 .slide-text{
-  overflow: auto;
+  overflow: hidden;
   letter-spacing: 0.1em;
-  line-height: 2em;
+  line-height: 1.9em;
   font-size: 1.5em;
   margin-top: 50px;
   padding-left: 20px;
+  height: 100%;
+}
+.slide-text a{
+  bottom: 50px;
+  
+  position: absolute;
 }
 .card-item{
   max-width: 300px;
   position: relative;
-  float: left;
+  display: inline-table;
   margin-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+  min-height: 450px;
 }
-.card-item:last-child{
-  margin-right: 0px;
+.home-medias{
+  background: url('../public/imagem/medias.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.home-medias span.content{
+  font-size: 2.3em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 1em;
+  display: block;
+  margin-bottom: 20px;
+}
+.home-medias span.content:last-child{
+  margin-bottom: 0px;
+  padding-bottom: 40px;
+}
+.home-medias span{
+  color:white;
 }
 
-.card-wrapper{overflow: auto;}
+.card-wrapper{overflow: hidden; text-align: center; }
 a:link, a:hover, a:active, a:visited{
   text-decoration: none;
+}
+.home-card-content{
+  font-size: 1em;
+  line-height: 2em;
+  letter-spacing: 0.12em;
 }
 
 .home-title{
@@ -111,8 +140,6 @@ a:link, a:hover, a:active, a:visited{
   font-size: 33px;
   min-height: 39px;
   line-height: 30px;
-  margin-bottom: 10px;
-  margin-top:20px;
   overflow: hidden;
 }
 .home-title span{
@@ -120,6 +147,12 @@ a:link, a:hover, a:active, a:visited{
   padding: 0 15px;
   display: inline-block;
 }
+
+.home-title span:first-letter{
+  color: blue;
+  font-size: 39px;
+}
+
 .home-title span:after, .home-title span:before{
   content: '';
   background: #000;
@@ -129,6 +162,10 @@ a:link, a:hover, a:active, a:visited{
   top: 50%;
   width: 100%;
 }
+.home-email{
+  background: #ddd;
+  padding: 0% 5%;
+}
 .home-title span:after{
   left: 100%;
 }
@@ -136,25 +173,51 @@ a:link, a:hover, a:active, a:visited{
   right: 100%;
 }
 .home-subtitle{
-  text-align: left;
+  padding: 40px 0px;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 26px;
-  min-height: 34px;
-  line-height: 26px;
-  margin-bottom: 5px;
-  margin-top:10px;
+  font-size: 23px;
+  min-height: 39px;
+  line-height: 30px;
+  overflow: hidden;
 }
-.home-subtitle:after{
+.home-subtitle span{
+  position: relative;
+  padding: 0 15px;
+  display: inline-block;
+}
+.home-subtitle span:first-letter{
+  color: red;
+  font-size:29px
+}
+.home-subtitle span:after, .home-subtitle span:before{
   content: '';
   background: #000;
   display: block;
   height: 1px;
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+}
+.home-subtitle span:after{
+  left: 100%;
+}
+.home-subtitle span:before{
+  right: 100%;
 }
 .selected{
   background-color: #ED8600;
 }
 
+.home-about{
+  overflow: hidden;
+  position: relative;
+}
+.home-about-background{
+  position: absolute;
+  width: 100%;
+  z-index: -999;
+}
 
 .pre_header{
   position: relative;
@@ -311,29 +374,34 @@ a:link, a:hover, a:active, a:visited{
 }
 .divider{
   width: 100%;
-  margin: 50px 0px 50px 0px;
+  padding: 50px 0px 0px 0px;
 }
 .divider:first-child{
-  margin-top: 0px;
+  padding-top: 0px;
 }
-.divider:last-child{
-  margin-bottom: 0px;
+.divider p{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  font-height: 1.6em;
+  font-size: 1.2em;
+}
+.divider p>br{
+  margin-bottom: 10px;
 }
 .home-paper {
+  font-size: 1.4em;
   position: relative;
   margin: 30px 0px;
-  width: 70%;
+  margin-right: 40px;
+  width: 50%;
   text-align: center;
+  float:left;
 }
 
 .container{
-  margin-left: 5%;
-  margin-right: 5%;
   min-width: 320px;
-  background: #fff;
-}
-.container div{
-  margin-left: 0px;
+  background: rgba(255,255,255,0.75);
 }
 @media only screen and (max-width: 910px) {
   .card_layout{
@@ -341,10 +409,29 @@ a:link, a:hover, a:active, a:visited{
     margin-right: 60px;
   }
 
+  .slide-text{
+    display: none;
+  }
+
+  .slide-image{
+    bottom: 40px;
+    float: unset;
+  }
+
+  .slide-image img{
+    width: 100%;
+  }
+  .slide-image h2{
+    bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 760px) {
 
+  .slide-image{
+    bottom: 40px;
+    float: unset;
+  }
   .card_layout{
     margin-right: 10px;
   }

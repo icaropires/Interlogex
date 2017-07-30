@@ -5,14 +5,17 @@ import Paper from 'material-ui/Paper';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import {List, ListItem, ListItemContent
         } from 'react-mdl';
 import { ArrowLeft, ArrowRight, Dots, Slides } from 'react-infinite-slide';
+import EmailForm from './EmailForm';
 import services from '../public/imagem/our_service.jpg';
 import business from '../public/imagem/who_we_are.jpg';
 import business_values from '../public/imagem/business.jpg';
 import negotiation from '../public/imagem/client_handle_2.jpg';
 import interlogexLogo from '../public/imagem/logo2.png';
+import interlogex from '../public/imagem/business.png';
 
 // <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
 class CardHome extends React.Component {
@@ -48,7 +51,9 @@ class CardService extends React.Component {
           <img src={this.props.image} alt="" />
         </CardMedia>
         <CardText expandable={true}>
+          <div className="home-card-content">
           {this.props.children}
+          </div>
         </CardText>
     <CardActions>
       <Link to="/servicos"><FlatButton label="Veja mais!" /></Link>
@@ -69,10 +74,10 @@ export default class Home extends React.Component {
               duration={300}
               delay={3000}
               width="100%"
-              style={{marginLeft: "0px"}}>
+      >
       <div className="slide-card">
         <div className="slide-image">
-          <Link to="/contato#map"><img src={interlogexLogo} style={{height: '100%'}}/></Link>
+          <img src={interlogexLogo} style={{height: '100%'}}/>
         </div>
       </div>
       <div className="slide-card">
@@ -81,7 +86,8 @@ export default class Home extends React.Component {
           <img  src={services} />
         </div>
         <div className="slide-text">
-          Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás. <br /><Link to="#service">V</Link>
+          Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás. <br />
+          <Link to="#service"><RaisedButton label="Ver" /></Link>
         </div>
       </div>
       <div className="slide-card">
@@ -90,7 +96,7 @@ export default class Home extends React.Component {
           <img  src={negotiation} />
         </div>
         <div className="slide-text">
-          Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.<br /><Link to="#client">V</Link>
+          Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.<br /><Link to="#client"><RaisedButton label="Ver"  /></Link>
         </div>
       </div>
       <div className="slide-card">
@@ -99,7 +105,7 @@ export default class Home extends React.Component {
           <img  src={business_values} />
         </div>
         <div className="slide-text">
-          Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal. <br /><Link to="#about">V</Link>
+          Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal. <br /><Link to="#about"><RaisedButton label="Ver"  /></Link>
         </div>
       </div>
       <div className="slide-card">
@@ -108,7 +114,7 @@ export default class Home extends React.Component {
           <img  src={business} />
         </div>
         <div className="slide-text">
-          A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong><br /><Link to="#about-business">V</Link>
+          A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong><br /><Link to="#about-business"><RaisedButton label="Ver"  /></Link>
         </div>
       </div>
     </Slides>
@@ -165,43 +171,51 @@ export default class Home extends React.Component {
   </div>
   <Divider />
   <div className="divider">
-    <div className="home-title" id="client"><span>Relacionamento com os clientes</span></div>
+    <div className="home-title" id="client"><span>Clientes</span></div>
     <div>
-      <p>Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.</p>
-      <p>Acreditamos que a melhor propaganda será a indicação dos nossos serviços.</p>
       <Paper className="home-paper" style={{marginLeft: "10%"}} zDepth={4}>
         <i>"Com a interlogex, eu conseguir ganhar tempo, pois não precisei esperar em filas de banco. O próprio entregador foi e resolveu pra mim" - <b>Cliente Anônimo</b></i>
       </Paper>
-      <p>Não abrimos mão de nossos valores e assim a cada dia construímos uma empresa que cumpre suas obrigações com os clientes, com os colaboradores e com a sociedade.</p>
-      <Divider />
-      <div className="home-subtitle">Os clientes</div>
-      <span>Veja o que os clientes falam na página do <Link to="https://facebook.com/interlogex">Facebook</Link></span>
-      <Divider />
-      <p>Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.</p>
-      <Link to="/contato">Entre em contato</Link>
+      <p>Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.
+      Não abrimos mão de nossos valores e assim a cada dia construímos uma empresa que cumpre suas obrigações com os clientes, com os colaboradores e com a sociedade.
+      Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.
+      </p>
+      <div className="home-medias">
+      <div className="home-subtitle"><span>Mídias sociais</span></div>
+
+
+      <span className="content">Acreditamos que a melhor propaganda será a indicação dos nossos serviços.<br /></span>
+      <span className="content">Veja o que os clientes falam na página do <br /><Link to="https://facebook.com/interlogex" target="_blank">Facebook</Link><br />
+      <Link to="https://instagram.com/interlogex" target="_blank">Instagram</Link> </span>
+      </div>
+      
+      <div className="home-email">
+      <div className="home-subtitle"><span>Mande e-mail</span></div>
+      <EmailForm />
+      </div>
     </div>
   </div>
   <Divider />
-  <div className="divider">
-      <div className="home-title" id="about"><span>Um pouco sobre nós</span></div>
+  <div className="divider home-about">
+      <img className="home-about-background" src={interlogex} />
+      <div className="home-title" id="about"><span>A Interlogex</span></div>
           <div>
-            <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.</p>
-            <p>Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.</p>
-            <p>Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
+            <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.<br />
+            Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.<br />
+            Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
           </div>
           <div id="about-business">
-            <div className="home-subtitle">Visão de negócio</div>
+            <div className="home-subtitle"><span>Visão de negócio</span></div>
             <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> </p>
             <Tabs>
               <Tab label="Valores">
-              <strong>Valores: </strong>
-              <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
+                <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
               </Tab>
               <Tab label="Visão">
-              <strong>Visão:</strong><p> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
+                <p> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
               </Tab>
               <Tab label="Missão">
-              <strong>Missão:</strong><p> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
+                <p> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
               </Tab>
             </Tabs>
           </div>
