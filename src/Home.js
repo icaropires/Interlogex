@@ -4,6 +4,9 @@ import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import CheckBoxIcon from 'material-ui/svg-icons/action/check-circle';
+import FontIcon from 'material-ui/FontIcon';
+import Checkbox from 'material-ui/Checkbox';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {List, ListItem, ListItemContent
@@ -119,7 +122,6 @@ export default class Home extends React.Component {
       </div>
     </Slides>
   </div>
-  <Divider />
   <div className="divider">
     <div className="home-title" id="service"><span>Serviços</span></div>
     <div className="card-wrapper">
@@ -169,7 +171,6 @@ export default class Home extends React.Component {
       </div>
     </div>
   </div>
-  <Divider />
   <div className="divider">
     <div className="home-title" id="client"><span>Clientes</span></div>
     <div>
@@ -195,26 +196,31 @@ export default class Home extends React.Component {
       </div>
     </div>
   </div>
-  <Divider />
   <div className="divider home-about">
       <img className="home-about-background" src={interlogex} />
       <div className="home-title" id="about"><span>A Interlogex</span></div>
           <div>
-            <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal.<br />
+            <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal, e fornecemos: <br />
+            <Checkbox id="click" label="Entregas rápidas" checked={true}/>
+            <Checkbox id="click" label="Eficientes" checked={true} />
+            <Checkbox id="click" label="Todo território nacional" checked={true} />
+            <Checkbox id="click" label="Equipe preparada" checked={true} />
+            <Checkbox id="click" label="Qualidade no atendimento" checked={true} />
+            <br />
             Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.<br />
             Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
           </div>
           <div id="about-business">
             <div className="home-subtitle"><span>Visão de negócio</span></div>
-            <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong> </p>
-            <Tabs>
-              <Tab label="Valores">
+            <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa:</p>
+            <Tabs tabItemContainerStyle={{background: '#152635'}}>
+              <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES">
                 <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
               </Tab>
-              <Tab label="Visão">
+              <Tab label="VISÃO" icon={<FontIcon className="material-icons">remove_red_eye</FontIcon>} >
                 <p> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
               </Tab>
-              <Tab label="Missão">
+              <Tab icon={<FontIcon className="material-icons">add_location</FontIcon>} label="MISSÃO">
                 <p> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
               </Tab>
             </Tabs>

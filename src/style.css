@@ -15,9 +15,13 @@ body:after{
   float:left;
 }
 .mobile>h4{
-  margin-left: 10%;
-  margin-top:10px;
+  padding-left: 20px;
+  margin: 0px 0px 0px 60px;
   line-height: 48px;
+  border-left: 1px solid black;
+  height: 55px;
+  color: black;
+  background: rgb(255, 255,255);
 }
 .desktop > a > img{
   float: left;
@@ -41,7 +45,6 @@ body:after{
 }
 .menuapp{
   background: #fff;
-  border-bottom: 1px solid #872f54;
   width: 100%;
   min-height: 55px;
 }
@@ -212,13 +215,15 @@ a:link, a:hover, a:active, a:visited{
 .home-about{
   overflow: hidden;
   position: relative;
+  background: rgba(255,255,255,0.90) !important;
 }
 .home-about-background{
   position: absolute;
   width: 100%;
   z-index: -999;
 }
-
+.home-about-check{
+}
 .pre_header{
   position: relative;
   width: 100%;
@@ -376,6 +381,12 @@ a:link, a:hover, a:active, a:visited{
   width: 100%;
   padding: 50px 0px 0px 0px;
 }
+.divider:nth-child(odd){
+  background: rgba(255,255,255,0.8);
+}
+.divider:nth-child(even){
+  background: rgba(255,255,255,1.0);
+}
 .divider:first-child{
   padding-top: 0px;
 }
@@ -383,7 +394,7 @@ a:link, a:hover, a:active, a:visited{
   margin-left: 20px;
   margin-right: 20px;
   text-align: justify;
-  font-height: 1.6em;
+  line-height: 1.6em;
   font-size: 1.2em;
 }
 .divider p>br{
@@ -401,7 +412,6 @@ a:link, a:hover, a:active, a:visited{
 
 .container{
   min-width: 320px;
-  background: rgba(255,255,255,0.75);
 }
 @media only screen and (max-width: 910px) {
   .card_layout{
@@ -440,6 +450,15 @@ a:link, a:hover, a:active, a:visited{
   }
 }
 
+@media only screen and (max-width: 671px) {
+  .card-item{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: unset;
+  }
+}
 @media only screen and (max-width: 759px) {
   #arrow{
     display: block;
