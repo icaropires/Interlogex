@@ -3,6 +3,7 @@ import {Link, BrowserRouter} from 'react-router-dom';
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import {blueA200} from 'material-ui/styles/colors';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import CheckBoxIcon from 'material-ui/svg-icons/action/check-circle';
 import FontIcon from 'material-ui/FontIcon';
@@ -19,6 +20,10 @@ import business_values from '../public/imagem/business.jpg';
 import negotiation from '../public/imagem/client_handle_2.jpg';
 import interlogexLogo from '../public/imagem/logo2.png';
 import interlogex from '../public/imagem/business.png';
+import contract from '../public/imagem/contract.jpg';
+import byTime from '../public/imagem/by_time.jpg';
+import schedule from '../public/imagem/schedule.jpg';
+import byDistance from '../public/imagem/by_distance.jpg';
 
 // <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
 class CardHome extends React.Component {
@@ -36,6 +41,7 @@ class CardHome extends React.Component {
     );
   }
 }
+
 class CardService extends React.Component {
   render(){
     return (
@@ -59,14 +65,57 @@ class CardService extends React.Component {
           </div>
         </CardText>
     <CardActions>
+      <Divider />
       <Link to="/servicos"><FlatButton label="Veja mais!" /></Link>
     </CardActions>
   </Card>
     );
   }
 }
+const depoimentList = [<i>"Com a interlogex, eu conseguir ganhar tempo, pois não precisei esperar em filas de banco. O próprio entregador foi e resolveu pra mim" - <b>Cliente Anônimo</b></i>, <i> "Tudo que precisei entregar, a Interlogex me atendeu,<strong>super recomento</strong>" - <b>Cliente Anônimo</b></i>, <i>"Não preciso mais me preocupar com manutenção de carro e salário de funcionário para ter alguém disponível para realizar serviços de lógistica" - <b>Cliente Anônimo</b></i>];
+
 
 export default class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.showScroll = this.showScroll.bind(this);
+    this.state={'scroll': true, 'depoimentCount': 0};
+  }
+  componentWillMount(){
+    this.setState({interval: setInterval(function(){
+      const element = document.getElementById("home-paper");
+      element.style.opacity="0"; 
+      setTimeout(function(){
+        this.setState({'depoimentCount': (this.state.depoimentCount+1) % depoimentList.length})
+        element.style.opacity="1";}.bind(this), 600);
+    }.bind(this), 3000)});
+  }
+  componentWillUnmount(){
+    clearInterval(this.state.interval);
+  }
+  componentDidMount(){
+    window.onscroll = this.showScroll;
+  }
+  showScroll(event){
+    if(this.state.scroll === true){
+      if(document.getElementsByClassName('home-about')[0].offsetTop-400 < window.scrollY){
+        const itemList = document.querySelectorAll(".home-objective-item");
+        let count = 0;
+        itemList.forEach(function(e){
+          setTimeout(function(){
+            e.style.marginLeft="100px";
+            setTimeout(function(){
+              e.children[0].style.color="#448aff";
+              e.style.color="#000";
+            }, 1000);
+          }
+          ,count);
+          count += 1000;});
+        this.setState({'scroll': false});
+      }
+    }
+
+  }
   render() {
     return (
 <div>
@@ -128,9 +177,9 @@ export default class Home extends React.Component {
       <div className="card-item">
         <CardService
           mainTitle="Contratos"
-          overlayTitle="Entregadores"
+          overlayTitle="Exclusividade"
           mainSubTitle="Exclusividade"
-          image="https://blog.loggi.com/wp-content/uploads/2014/08/mensageiros3.jpg" >
+          image={contract} >
             Contrate um de nossos motoboys de forma exclusiva!
             <Divider />
             Recrute-o por 1 dia, 1 semana ou o tempo que necessitar!
@@ -139,9 +188,9 @@ export default class Home extends React.Component {
       <div className="card-item">
         <CardService
           mainTitle="Contratos"
-          overlayTitle="Entregadores"
+          overlayTitle="Agendamento"
           mainSubTitle="Agendamento"
-          image="https://blog.loggi.com/wp-content/uploads/2014/08/mensageiros3.jpg" >
+          image={schedule} >
             Faça o agendamento das entregas para períodos definidos por você!
             <Divider />
             Escolha um motoboy em específico e agende as entregas.
@@ -152,7 +201,7 @@ export default class Home extends React.Component {
           mainTitle="Sob demanda"
           overlayTitle="Por horas"
           mainSubTitle="Quando precisar"
-          image="https://blog.loggi.com/wp-content/uploads/2014/08/mensageiros3.jpg" >
+          image={byTime} >
             Contrate um nossos serviços pela quantidade de horas que precisar!
             <Divider />
             Polpe seu dinheiro, pague somente as horas que necessitar das entregas.
@@ -163,7 +212,7 @@ export default class Home extends React.Component {
           mainTitle="Sob demanda"
           overlayTitle="Pela distância"
           mainSubTitle="Quando precisar"
-          image="https://blog.loggi.com/wp-content/uploads/2014/08/mensageiros3.jpg" >
+          image={byDistance} >
             Faça suas entregas e não se preocupe com o tempo.
             <Divider />
             Calculamos o valor de cada entrega baseado na distância da entrega.
@@ -175,7 +224,9 @@ export default class Home extends React.Component {
     <div className="home-title" id="client"><span>Clientes</span></div>
     <div>
       <Paper className="home-paper" style={{marginLeft: "10%"}} zDepth={4}>
-        <i>"Com a interlogex, eu conseguir ganhar tempo, pois não precisei esperar em filas de banco. O próprio entregador foi e resolveu pra mim" - <b>Cliente Anônimo</b></i>
+        <div id="home-paper">
+        {depoimentList[this.state.depoimentCount]}
+        </div>
       </Paper>
       <p>Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.
       Não abrimos mão de nossos valores e assim a cada dia construímos uma empresa que cumpre suas obrigações com os clientes, com os colaboradores e com a sociedade.
@@ -186,8 +237,9 @@ export default class Home extends React.Component {
 
 
       <span className="content">Acreditamos que a melhor propaganda será a indicação dos nossos serviços.<br /></span>
-      <span className="content">Veja o que os clientes falam na página do <br /><Link to="https://facebook.com/interlogex" target="_blank">Facebook</Link><br />
-      <Link to="https://instagram.com/interlogex" target="_blank">Instagram</Link> </span>
+      <span className="content">Veja o que os clientes falam na página do <br /><Link to="https://facebook.com/interlogex" target="_blank"><i className="mdi mdi-facebook mdi-24px" style={{marginRight: '10px'}} /> Facebook</Link><br />
+                   
+      <Link to="https://instagram.com/interlogex" target="_blank"><i className="mdi mdi-instagram mdi-24px" style={{marginRight: '10px'}} />Instagram</Link> </span>
       </div>
       
       <div className="home-email">
@@ -201,11 +253,23 @@ export default class Home extends React.Component {
       <div className="home-title" id="about"><span>A Interlogex</span></div>
           <div>
             <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal, e fornecemos: <br />
-            <Checkbox id="click" label="Entregas rápidas" checked={true}/>
-            <Checkbox id="click" label="Eficientes" checked={true} />
-            <Checkbox id="click" label="Todo território nacional" checked={true} />
-            <Checkbox id="click" label="Equipe preparada" checked={true} />
-            <Checkbox id="click" label="Qualidade no atendimento" checked={true} />
+            <div className="home-objective">
+              <div className="home-objective-item">
+                <FontIcon className="material-icons">check_box</FontIcon><span>Entregas rápidas</span>
+              </div>
+              <div className="home-objective-item">
+                <FontIcon className="material-icons">check_box</FontIcon><span>Eficiência no atendimento</span>
+              </div>
+              <div className="home-objective-item">
+                <FontIcon className="material-icons">check_box</FontIcon><span>Todo território nacional</span>
+              </div>
+              <div className="home-objective-item">
+                <FontIcon className="material-icons">check_box</FontIcon><span>Qualidade no atendimento</span>
+              </div>
+              <div className="home-objective-item">
+                <FontIcon className="material-icons">check_box</FontIcon><span>Equipe preparada</span>
+              </div>
+            </div>
             <br />
             Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.<br />
             Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
@@ -213,14 +277,14 @@ export default class Home extends React.Component {
           <div id="about-business">
             <div className="home-subtitle"><span>Visão de negócio</span></div>
             <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa:</p>
-            <Tabs tabItemContainerStyle={{background: '#152635'}}>
-              <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES">
+            <Tabs tabItemContainerStyle={{background: '#152635'}} contentContainerClassName="home-tab" >
+              <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES" >
                 <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
               </Tab>
               <Tab label="VISÃO" icon={<FontIcon className="material-icons">remove_red_eye</FontIcon>} >
                 <p> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
               </Tab>
-              <Tab icon={<FontIcon className="material-icons">add_location</FontIcon>} label="MISSÃO">
+              <Tab icon={<FontIcon className="material-icons">add_location</FontIcon>} label="MISSÃO" >
                 <p> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
               </Tab>
             </Tabs>
