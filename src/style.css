@@ -215,6 +215,24 @@ a:link, a:hover, a:active, a:visited{
 .home-subtitle span:before{
   right: 100%;
 }
+.home-subsubtitle{
+  margin-bottom: 0px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 23px;
+  min-height: 39px;
+  line-height: 30px;
+  position: relative;
+}
+.home-subsubtitle span:after{
+  content: '';
+  background: black;
+  height: 1px;
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  bottom: 0px;
+}
 
 .home-about{
   overflow: hidden;
@@ -360,21 +378,11 @@ a:link, a:hover, a:active, a:visited{
   font-size: 40px;
 }
 
-.cell_custom{
-  background: #152635;
-  color: #9f9f9f;
-}
-
 .page_head{
   text-align: center;
   font-size: 55px;
 }
 
-.contact_head{
-  background: url('../public/imagem/plano_de_fundo_contatos.png');
-  background-size: cover;
-  background-position: left center;
-}
 .client_head{
   background: url('../public/imagem/plano_de_fundo_areacliente.png');
   background-size: cover;
@@ -384,11 +392,18 @@ a:link, a:hover, a:active, a:visited{
   width: 100%;
   font-weight: bold;
 }
+.contact-information{
+  position: relative;
+}
+.contact-container{
+  display: inline-block;
+}
 
 .ddd{
   margin-left: 10px;
   color: #872f54;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .obrigatory{
@@ -400,6 +415,7 @@ a:link, a:hover, a:active, a:visited{
   min-width:400px;
   min-height: 400px;
 }
+
 .divider{
   width: 100%;
   padding: 50px 0px 0px 0px;
@@ -424,6 +440,10 @@ a:link, a:hover, a:active, a:visited{
 }
 .divider p>br{
   margin-bottom: 10px;
+}
+.divider-content{
+  margin-left:5%;
+  margin-right: 5%;
 }
 .home-paper {
   font-size: 1.4em;

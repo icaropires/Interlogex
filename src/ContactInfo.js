@@ -8,7 +8,7 @@ import SocialMedias from './SocialMedias';
 export default class ContactInfo extends React.Component {
   render(){
     return (
-    <div>
+    <div className="contact-container">
       <Phones />
       <SocialMedias />
       <Adress />
