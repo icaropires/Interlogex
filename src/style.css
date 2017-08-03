@@ -325,6 +325,7 @@ a:link, a:hover, a:active, a:visited{
   width: 100%;
   padding: 2%;
 }
+
 #service_container:nth-child(even){
   background: #f3f3f3;
 }
@@ -332,15 +333,33 @@ a:link, a:hover, a:active, a:visited{
 
 .company_name{
   color: white;
+  text-align: center;
 }
-.footer_list{
-  color:#9e9e9e;
+
+#footer{
+	background: black;
+	height: 250px;
 }
+
+#footer_address{
+	text-align: center;
+}
+
+.footer_grid{
+	height: 70%;
+}
+
+.footer_drop{
+	height: 100%;
+	width: 100% !important;
+}
+
 .label{
   font-weight: bold;
 }
+
 #title{
-  color:white;
+  color: white;
   font-size: 20px;
 }
 

@@ -9,13 +9,13 @@ import {
 export default class FooterInterlogex extends React.Component {
    render(){
        return (
-         <Footer style={{background: 'black', height:'250px'}}>
-           <FooterSection type="middle" style={{height: '80%'}}>
-             <Grid style={{height: "100%"}}>
+         <Footer id='footer'>
+           <FooterSection type="middle">
+             <Grid className='footer_grid'>
 
-               <Cell col={3} style={{height: "100%"}}>
-                 <FooterDropDownSection title="Áreas do site" style={{width: '100%'}}>
-                   <FooterLinkList className="footer_list">
+               <Cell col={3}>
+                 <FooterDropDownSection className='footer_drop' title="Áreas do site">
+                   <FooterLinkList>
                      <Link to="#"> Destaques </Link>
                      <Link to="#"> Serviços </Link>
                      <Link to="#"> Relacionamento c/ Clientes </Link>
@@ -26,9 +26,9 @@ export default class FooterInterlogex extends React.Component {
                  </FooterDropDownSection>
                </Cell>
 
-               <Cell col={3} style={{height: "100%"}}>
-                 <FooterDropDownSection title="Telefones" style={{width: '100%'}}>
-                   <FooterLinkList className="footer_list">
+               <Cell col={3}>
+                 <FooterDropDownSection className='footer_drop' title="Telefones">
+                   <FooterLinkList>
                      <div>
                        <Icon name="phone" style={{marginRight: "5px"}} />
                        (61) 3554-5467
@@ -41,9 +41,9 @@ export default class FooterInterlogex extends React.Component {
                  </FooterDropDownSection>
                </Cell>
 
-               <Cell col={3} style={{height: "100%"}}>
-                 <FooterDropDownSection title="E-mails" style={{width: '100%'}}>
-                   <FooterLinkList className="footer_list">
+               <Cell col={3}>
+                 <FooterDropDownSection className='footer_drop' title="E-mails">
+                   <FooterLinkList>
                      <div>
                        <Icon name="email" style={{marginRight: "5px"}} />
                        <Tooltip label="Envie-nos um e-mail" large>
@@ -56,9 +56,9 @@ export default class FooterInterlogex extends React.Component {
                  </FooterDropDownSection>
                </Cell>
 
-               <Cell col={3} style={{height: "100%"}}>
-                 <FooterDropDownSection title="Redes Sociais" style={{width: '100%'}}>
-                   <FooterLinkList className="footer_list">
+               <Cell col={3}>
+                 <FooterDropDownSection className='footer_drop' title="Redes Sociais">
+                   <FooterLinkList>
                      <div>
                        <Tooltip label="Ir para página do Facebook" large>
                          <Link target="_blank" to="http://facebook.com/interlogex">
@@ -85,17 +85,16 @@ export default class FooterInterlogex extends React.Component {
            </FooterSection>
 
            <FooterSection type="bottom">
-             <center className="company_name">
-               <div>
-                 {/* <Icon name="home" /> */}
-                 <Tooltip label="Nos veja no mapa!" large>
-                   <Link style={{textDecoration: "none", color: "inherit"}} to="/contato#map">
-                     SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
-                   </Link>
-                 </Tooltip>
-               </div>
+             <Cell className='company_name' col={12}>
+               <Tooltip label="Nos veja no mapa!" large>
+                 <Link id='footer_address' style={{textDecoration: "none", color: "inherit"}} to="/contato#map">
+                   SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
+                 </Link>
+               </Tooltip>
+             </Cell>
+             <Cell id='footer_address' col={12}>
                InterlogEx © Internacional Logistica Express - Todos os direitos reservados
-             </center>
+             </Cell>
            </FooterSection>
 
          </Footer>
