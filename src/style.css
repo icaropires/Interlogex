@@ -334,24 +334,41 @@ a:link, a:hover, a:active, a:visited{
 .company_name{
   color: white;
   text-align: center;
+  bottom: 50;
+  margin: 0 !important;
 }
 
 #footer{
-	background: black;
-	height: 250px;
+  background: #020C1A;
+  padding: 0 40px;
+  height: 250px;
+  overflow: hidden;
+}
+
+#footers_footer{
+  height: 20%;
+  background: #010812;
+  bottom: 0;
+  margin: 0 -40px;
+  padding: 11px 0 !important;
 }
 
 #footer_address{
-	text-align: center;
+  text-align: center;
+  margin: 0;
+  margin-top: 2px;
 }
 
-.footer_grid{
-	height: 70%;
+#footer_grid{
+  height: 75%;
+  padding-top: 0;
+  margin-top: -5;
+  margin-left: 8%;
 }
 
 .footer_drop{
-	height: 100%;
-	width: 100% !important;
+  width: 100% !important;
+  margin-top: -5;
 }
 
 .label{

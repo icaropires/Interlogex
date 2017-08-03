@@ -11,7 +11,7 @@ export default class FooterInterlogex extends React.Component {
        return (
          <Footer id='footer'>
            <FooterSection type="middle">
-             <Grid className='footer_grid'>
+             <Grid id='footer_grid'>
 
                <Cell col={3}>
                  <FooterDropDownSection className='footer_drop' title="Áreas do site">
@@ -84,7 +84,7 @@ export default class FooterInterlogex extends React.Component {
              </Grid>
            </FooterSection>
 
-           <FooterSection type="bottom">
+           <FooterSection id='footers_footer' type="bottom">
              <Cell className='company_name' col={12}>
                <Tooltip label="Nos veja no mapa!" large>
                  <Link id='footer_address' style={{textDecoration: "none", color: "inherit"}} to="/contato#map">
