@@ -330,6 +330,12 @@ a:link, a:hover, a:active, a:visited{
   background: #f3f3f3;
 }
 
+
+.email_icon{
+	position: relative;
+	top: 3px;
+}
+
 #footer{
   background: #020C1A;
   padding: 0 40px;

@@ -40,7 +40,7 @@ export default class SocialMedias extends React.Component {
           <Cell col={12}>
             <Tooltip label="Envie-nos um email" large>
               <Link style={{textDecoration: "none", color: "inherit"}} target='_top' to="mailto:interlogex@interlogex.com.br?Subject=Contato">
-                <Icon name="email" style={{marginRight: '10px'}} />
+                <Icon className='email_icon' name="email" style={{marginRight: '10px'}} />
                 interlogex@interlogex.com.br
               </Link>
             </Tooltip>

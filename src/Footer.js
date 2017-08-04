@@ -45,7 +45,7 @@ export default class FooterInterlogex extends React.Component {
                  <FooterDropDownSection className='footer_drop' title="E-mails">
                    <FooterLinkList>
                      <div>
-                       <Icon name="email" style={{marginRight: "5px"}} />
+                       <Icon className='email_icon' name="email" style={{marginRight: "5px"}} />
                        <Tooltip label="Envie-nos um e-mail" large>
                          <Link to="/contato#contact">
                            interlogex@interlogex.com.br

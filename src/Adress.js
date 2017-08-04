@@ -11,7 +11,7 @@ export default class Adress extends React.Component {
         <div ><h1>Endereço</h1></div>
 
         <div >
-        <Icon name="home" style={{marginRight: '10px'}}/>
+        <Icon name="home" style={{marginRight: '10px', top: '3px', position: 'relative'}}/>
         SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
         </div>
       </div>
