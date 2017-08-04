@@ -85,14 +85,17 @@ export default class FooterInterlogex extends React.Component {
            </FooterSection>
 
            <FooterSection id='footers_footer' type="bottom">
-             <Cell className='company_name' col={12}>
+             <Cell id='office_hours' col={12}>
+               Atendemos das 8:15 às 18:00
+             </Cell>
+             <Cell id='footer_address' col={12}>
                <Tooltip label="Nos veja no mapa!" large>
                  <Link id='footer_address' style={{textDecoration: "none", color: "inherit"}} to="/contato#map">
                    SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
                  </Link>
                </Tooltip>
              </Cell>
-             <Cell id='footer_address' col={12}>
+             <Cell id='footer_company_name' col={12}>
                InterlogEx © Internacional Logistica Express - Todos os direitos reservados
              </Cell>
            </FooterSection>

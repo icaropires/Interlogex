@@ -330,39 +330,38 @@ a:link, a:hover, a:active, a:visited{
   background: #f3f3f3;
 }
 
-
-.company_name{
-  color: white;
-  text-align: center;
-  bottom: 50;
-  margin: 0 !important;
-}
-
 #footer{
   background: #020C1A;
   padding: 0 40px;
-  height: 250px;
+  height: 262px;
   overflow: hidden;
 }
 
+#footer_company_name{
+  text-align: center;
+	font-size: 12;
+  margin: 0;
+  margin-top: 2px;
+}
+
 #footers_footer{
-  height: 20%;
+  height: 30%;
   background: #010812;
   bottom: 0;
   margin: 0 -40px;
   padding: 11px 0 !important;
 }
 
-#footer_address{
+#footer_address, #office_hours{
+  color: white;
   text-align: center;
-  margin: 0;
-  margin-top: 2px;
+  margin: 0 !important;
 }
 
 #footer_grid{
-  height: 75%;
+  height: 70%;
   padding-top: 0;
-  margin-top: -5;
+  margin-top: -10;
   margin-left: 8%;
 }
 
