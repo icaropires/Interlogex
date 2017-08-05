@@ -12,7 +12,7 @@ import togo from '../public/imagem/to_go_2.jpg';
 export default class Services extends Component {
     render() {
 		return(
-			<div className="service">
+			<div id='services' className="service">
         <h1>Serviços</h1>
         Nós fornecemos vários tipos de serviços além de uma simples entrega de pacotes, conheça abaixo um pouco mais.
         <Cell id="service_container">

@@ -16,12 +16,12 @@ export default class FooterInterlogex extends React.Component {
                <Cell col={3}>
                  <FooterDropDownSection className='footer_drop' title="Áreas do site">
                    <FooterLinkList>
-                     <Link to="#"> Destaques </Link>
-                     <Link to="#"> Serviços </Link>
-                     <Link to="#"> Relacionamento c/ Clientes </Link>
-                     <Link to="#"> Contato </Link>
-                     <Link to="#"> Sobre nós </Link>
-                     <Link to="#"> Área do cliente </Link>
+                     <Link to="/"> Início </Link>
+                     <Link to="/servicos#services"> Serviços </Link>
+                     <Link to="/#client"> Relacionamento c/ Clientes </Link>
+                     <Link to="/contato#contacts"> Contato </Link>
+                     <Link to="/#about_us"> Sobre nós </Link>
+                     <Link to="/areacliente#clientArea"> Área do cliente </Link>
                    </FooterLinkList>
                  </FooterDropDownSection>
                </Cell>
@@ -67,7 +67,7 @@ export default class FooterInterlogex extends React.Component {
                        </Tooltip>
 
                        <Tooltip label="Ir para perfil do Linkedin" large>
-                         <Link target="_blank" to="https://br.linkedin.com/in/internacional-interlogex">
+                         <Link target="_blank" to="https://br.linkedin.com/in/internacional-interlogex-6b72a1145">
                            <Icon className="mdi mdi-linkedin mdi-24px" style={{margin: '2px'}}/>
                          </Link>
                        </Tooltip>

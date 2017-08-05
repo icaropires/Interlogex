@@ -39,22 +39,22 @@ class CardService extends React.Component {
         />
         <CardMedia
           overlay={<CardTitle
-                      title={this.props.overlayTitle}
-                      subtitle={this.props.overlaySubTitle} />}
-        >
-          <img src={this.props.image} alt="" />
-        </CardMedia>
-        <CardText expandable={true}>
-          <div className="home-card-content">
-          {this.props.children}
-          </div>
-        </CardText>
-    <CardActions>
-      <Divider />
-      <Link to="/servicos"><FlatButton label="Veja mais!" /></Link>
-    </CardActions>
-  </Card>
-    );
+            title={this.props.overlayTitle}
+            subtitle={this.props.overlaySubTitle} />}
+          >
+            <img src={this.props.image} alt="" />
+          </CardMedia>
+          <CardText expandable={true}>
+            <div className="home-card-content">
+              {this.props.children}
+            </div>
+          </CardText>
+          <CardActions>
+            <Divider />
+            <Link to="/servicos"><FlatButton label="Veja mais!" /></Link>
+          </CardActions>
+        </Card>
+      );
   }
 }
 
@@ -110,13 +110,14 @@ export default class Home extends React.Component {
     return (
       <div>
         <div className="divider">
-          <Slides arrowLeft={ArrowLeft}
-                    arrowRight={ArrowRight}
-                    dots={Dots}
-                    duration={300}
-                    delay={3000}
-                    width="100%"
-            >
+          <Slides id='main_slider'
+            arrowLeft={ArrowLeft}
+            arrowRight={ArrowRight}
+            dots={Dots}
+            duration={300}
+            delay={3000}
+            width="100%"
+          >
             <div className="slide-card">
               <div className="slide-image">
                 <img src={interlogexLogo} style={{height: '100%'}}/>
@@ -170,9 +171,9 @@ export default class Home extends React.Component {
                 overlayTitle="Exclusividade"
                 mainSubTitle="Exclusividade"
                 image={contract} >
-                  Contrate um de nossos motoboys de forma exclusiva!
-                  <Divider />
-                  Recrute-o por 1 dia, 1 semana ou o tempo que necessitar!
+                Contrate um de nossos motoboys de forma exclusiva!
+                <Divider />
+                Recrute-o por 1 dia, 1 semana ou o tempo que necessitar!
               </CardService>
             </div>
             <div className="card-item">
@@ -181,9 +182,9 @@ export default class Home extends React.Component {
                 overlayTitle="Agendamento"
                 mainSubTitle="Agendamento"
                 image={schedule} >
-                  Faça o agendamento das entregas para períodos definidos por você!
-                  <Divider />
-                  Escolha um motoboy em específico e agende as entregas.
+                Faça o agendamento das entregas para períodos definidos por você!
+                <Divider />
+                Escolha um motoboy em específico e agende as entregas.
               </CardService>
             </div>
             <div className="card-item">
@@ -192,9 +193,9 @@ export default class Home extends React.Component {
                 overlayTitle="Por horas"
                 mainSubTitle="Quando precisar"
                 image={byTime} >
-                  Contrate um nossos serviços pela quantidade de horas que precisar!
-                  <Divider />
-                  Polpe seu dinheiro, pague somente as horas que necessitar das entregas.
+                Contrate um nossos serviços pela quantidade de horas que precisar!
+                <Divider />
+                Polpe seu dinheiro, pague somente as horas que necessitar das entregas.
               </CardService>
             </div>
             <div className="card-item">
@@ -203,9 +204,9 @@ export default class Home extends React.Component {
                 overlayTitle="Pela distância"
                 mainSubTitle="Quando precisar"
                 image={byDistance} >
-                  Faça suas entregas e não se preocupe com o tempo.
-                  <Divider />
-                  Calculamos o valor de cada entrega baseado na distância da entrega.
+                Faça suas entregas e não se preocupe com o tempo.
+                <Divider />
+                Calculamos o valor de cada entrega baseado na distância da entrega.
               </CardService>
             </div>
           </div>
@@ -215,71 +216,71 @@ export default class Home extends React.Component {
           <div>
             <Paper className="home-paper" style={{marginLeft: "10%"}} zDepth={4}>
               <div id="home-paper">
-              {depoimentList[this.state.depoimentCount]}
+                {depoimentList[this.state.depoimentCount]}
               </div>
             </Paper>
             <p>Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.
-            Não abrimos mão de nossos valores e assim a cada dia construímos uma empresa que cumpre suas obrigações com os clientes, com os colaboradores e com a sociedade.
-            Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.
-            </p>
-            <div className="home-medias">
-            <div className="home-subtitle"><span>Mídias sociais</span></div>
+      Não abrimos mão de nossos valores e assim a cada dia construímos uma empresa que cumpre suas obrigações com os clientes, com os colaboradores e com a sociedade.
+      Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.
+    </p>
+    <div className="home-medias">
+      <div className="home-subtitle"><span>Mídias sociais</span></div>
 
 
-            <span className="content">Acreditamos que a melhor propaganda será a indicação dos nossos serviços.<br /></span>
-            <span className="content">Veja o que os clientes falam na página do <br /><Link to="https://facebook.com/interlogex" target="_blank"><i className="mdi mdi-facebook mdi-24px" style={{marginRight: '10px'}} /> Facebook</Link><br />
+      <span className="content">Acreditamos que a melhor propaganda será a indicação dos nossos serviços.<br /></span>
+      <span className="content">Veja o que os clientes falam na página do <br /><Link to="https://facebook.com/interlogex" target="_blank"><i className="mdi mdi-facebook mdi-24px" style={{marginRight: '10px'}} /> Facebook</Link><br />
 
-            <Link to="https://instagram.com/interlogex" target="_blank"><i className="mdi mdi-instagram mdi-24px" style={{marginRight: '10px'}} />Instagram</Link> </span>
-            </div>
+        <Link to="https://instagram.com/interlogex" target="_blank"><i className="mdi mdi-instagram mdi-24px" style={{marginRight: '10px'}} />Instagram</Link> </span>
+    </div>
 
-            <div className="home-email">
-            <div className="home-subtitle"><span>Mande e-mail</span></div>
-            <EmailForm />
-            </div>
-          </div>
+    <div className="home-email">
+      <div className="home-subtitle"><span>Mande e-mail</span></div>
+      <EmailForm />
+    </div>
+  </div>
+</div>
+<div id="about_us" className="divider home-about">
+  <img className="home-about-background" src={interlogex} />
+  <div className="home-title" id="about"><span>A Interlogex</span></div>
+  <div>
+    <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal, e fornecemos: <br />
+      <div className="home-objective">
+        <div className="home-objective-item">
+          <FontIcon className="material-icons">check_box</FontIcon><span>Entregas rápidas</span>
         </div>
-        <div className="divider home-about">
-            <img className="home-about-background" src={interlogex} />
-            <div className="home-title" id="about"><span>A Interlogex</span></div>
-                <div>
-                  <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal, e fornecemos: <br />
-                  <div className="home-objective">
-                    <div className="home-objective-item">
-                      <FontIcon className="material-icons">check_box</FontIcon><span>Entregas rápidas</span>
-                    </div>
-                    <div className="home-objective-item">
-                      <FontIcon className="material-icons">check_box</FontIcon><span>Eficiência no atendimento</span>
-                    </div>
-                    <div className="home-objective-item">
-                      <FontIcon className="material-icons">check_box</FontIcon><span>Todo território nacional</span>
-                    </div>
-                    <div className="home-objective-item">
-                      <FontIcon className="material-icons">check_box</FontIcon><span>Qualidade no atendimento</span>
-                    </div>
-                    <div className="home-objective-item">
-                      <FontIcon className="material-icons">check_box</FontIcon><span>Equipe preparada</span>
-                    </div>
-                  </div>
-                  <br />
-                  Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.<br />
-                  Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
-                </div>
-                <div id="about-business">
-                  <div className="home-subtitle"><span>Visão de negócio</span></div>
-                  <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa:</p>
-                  <Tabs tabItemContainerStyle={{background: '#152635'}} contentContainerClassName="home-tab" >
-                    <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES" >
-                      <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
-                    </Tab>
-                    <Tab label="VISÃO" icon={<FontIcon className="material-icons">remove_red_eye</FontIcon>} >
-                      <p> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
-                    </Tab>
-                    <Tab icon={<FontIcon className="material-icons">add_location</FontIcon>} label="MISSÃO" >
-                      <p> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
-                    </Tab>
-                  </Tabs>
-                </div>
+        <div className="home-objective-item">
+          <FontIcon className="material-icons">check_box</FontIcon><span>Eficiência no atendimento</span>
         </div>
+        <div className="home-objective-item">
+          <FontIcon className="material-icons">check_box</FontIcon><span>Todo território nacional</span>
+        </div>
+        <div className="home-objective-item">
+          <FontIcon className="material-icons">check_box</FontIcon><span>Qualidade no atendimento</span>
+        </div>
+        <div className="home-objective-item">
+          <FontIcon className="material-icons">check_box</FontIcon><span>Equipe preparada</span>
+        </div>
+      </div>
+      <br />
+      Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.<br />
+      Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
+  </div>
+  <div id="about-business">
+    <div className="home-subtitle"><span>Visão de negócio</span></div>
+    <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa:</p>
+    <Tabs tabItemContainerStyle={{background: '#152635'}} contentContainerClassName="home-tab" >
+      <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES" >
+        <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>
+      </Tab>
+      <Tab label="VISÃO" icon={<FontIcon className="material-icons">remove_red_eye</FontIcon>} >
+        <p> Ser a melhor empresa de transportes para se trabalhar e de prestação de serviços.</p>
+      </Tab>
+      <Tab icon={<FontIcon className="material-icons">add_location</FontIcon>} label="MISSÃO" >
+        <p> Oferecer serviços de transporte com eficiência, ética, qualidade e responsabilidade.</p>
+      </Tab>
+    </Tabs>
+  </div>
+</div>
       </div>
     );
   }

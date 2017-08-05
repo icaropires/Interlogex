@@ -355,7 +355,7 @@ a:link, a:hover, a:active, a:visited{
   background: #010812;
   bottom: 0;
   margin: 0 -40px;
-  padding: 11px 0 !important;
+  padding: 9px 0 !important;
 }
 
 #footer_address, #office_hours{
@@ -365,7 +365,7 @@ a:link, a:hover, a:active, a:visited{
 }
 
 #footer_grid{
-  height: 70%;
+  height: 72%;
   padding-top: 0;
   margin-top: -10;
   margin-left: 8%;

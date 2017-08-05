@@ -8,7 +8,7 @@ export default class Contact extends React.Component {
   render(){
     return (
       <div>
-        <div className="divider">
+        <div id='contacts' className="divider">
           <div className="home-subtitle">
             <span id="social-media">Contatos</span>
           </div>

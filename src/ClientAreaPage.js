@@ -6,7 +6,7 @@ import { Grid, Cell } from 'react-mdl';
 export default class ClientArea extends Component {
     render() {
         return(
-          <div className="client">
+          <div id='clientArea' className="client">
           <Grid  className="page_head client_head">
             <Cell col={12}>
               <h1>ACOMPANHE SEUS PEDIDOS</h1>
