@@ -5,10 +5,10 @@ import 'mdi/css/materialdesignicons.min.css';
 export default class Phones extends React.Component {
   render(){
    return (
-    <div>
+    <div className="contact-container-item">
       <div className="home-subsubtitle"><span>Telefones</span></div>
 
-        <div className="card_contact">
+        <div className="card-contact">
           <div >
             <Icon name="phone"/>
             <label className="ddd">

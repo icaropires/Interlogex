@@ -8,17 +8,17 @@ export default class Contact extends React.Component {
   render(){
     return (
       <div>
+        <div className="divider">
+          <div className="contact-page-init">
+            <img src="https://static.pexels.com/photos/326569/pexels-photo-326569.jpeg" />
+          </div>
+        </div>
         <div id='contacts' className="divider">
-          <div className="home-subtitle">
-            <span id="social-media">Contatos</span>
+          <div id="social-media" className="home-title">
+            <span>Contatos</span>
           </div>
           <div className="divider-content">
             <ContactInfo />
-          </div>
-        </div>
-        <div  className="divider">
-          <div className="home-title">
-            <span>CONTATOS</span>
           </div>
         </div>
         <div className="divider">
