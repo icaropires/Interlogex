@@ -426,9 +426,11 @@ a:link, a:hover, a:active, a:visited{
 }
 
 .client_head{
-  background: url('../public/imagem/plano_de_fundo_areacliente.png');
+  background: url('../public/imagem/client_area.jpg');
   background-size: cover;
-  background-position: left center;
+  background-position: right center;
+  margin-bottom: 75px;
+  height: 40%;
 }
 .contact-page-init{
   position: absolute;
@@ -528,6 +530,15 @@ color: white;
   margin-left:5%;
   margin-right: 5%;
 }
+.divider-split{
+  position: relative;
+  float: left;
+  width: 50%;
+  min-width: 320px;
+  text-align: center;
+  margin-bottom: 140px;
+}
+
 .home-paper {
   font-size: 1.4em;
   line-height: 1.4em;
@@ -599,6 +610,9 @@ color: white;
   }
 }
 @media only screen and (max-width: 759px) {
+  .divider-split{
+    width: 100%;
+  }
   #arrow{
     display: block;
   }
@@ -613,6 +627,10 @@ color: white;
   }
 }
 @media only screen and (max-width: 1024px) {
+  .client_head{
+    height: 30%;
+  }
+
   .menuapp{
     border-top: solid 1px black;
   }

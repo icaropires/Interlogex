@@ -6,25 +6,27 @@ import { Grid, Cell } from 'react-mdl';
 export default class ClientArea extends Component {
     render() {
         return(
-          <div id='clientArea' className="client">
-          <Grid  className="page_head client_head">
-            <Cell col={12}>
-              <h1>ACOMPANHE SEUS PEDIDOS</h1>
-            </Cell>
-          </Grid>
-            <Grid >
-              <Cell col={6}>
-              <h1>Login</h1>
-              <ClientLogin />
-            </Cell>
-            <Cell col={6} className="cell_custom">
-              <Cell col={12}>
-            <h1>Avaliações</h1>
-              <Comment url="interlogex.com.br/areacliente"/>
-            </Cell>
-              </Cell>
-          </Grid>
-        </div>
+          <div id='clientArea' className="divider">
+            <div  className="client_head">
+            </div>
+            <div className="home-title">
+              <span>ACOMPANHE SEUS PEDIDOS</span>
+            </div>
+            <div className="divider-content" style={{overflow: 'hidden'}}>
+              <div className="divider-split">
+                <div className="home-subtitle">
+                  <span>Login</span>
+                </div>
+                <ClientLogin />
+              </div>
+              <div className="divider-split">
+                <div className="home-subtitle">
+                  <span>Avaliações</span>
+                </div>
+                <Comment url="interlogex.com.br/areacliente"/>
+              </div>
+            </div>
+          </div>
         ); 
     }
 }
