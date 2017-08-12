@@ -465,6 +465,18 @@ a:link, a:hover, a:active, a:visited{
   width: 320px;
   margin: -1000px 30px 50px 30px;
 }
+#contact-facebook{
+  background-image: url('../public/imagem/contact_facebook.png');
+  background-size: cover;
+  background-position: center center;
+}
+#contact-facebook .home-title{
+color: white;
+}
+#contact-facebook .home-title span:before, #contact-facebook .home-title span:after{
+  background: white;
+}
+
 #social-media{
   margin-top: 200px;
 }
@@ -482,6 +494,7 @@ a:link, a:hover, a:active, a:visited{
 }
 
 .maps{
+  margin-top: 100px;
   min-width:400px;
   min-height: 400px;
 }
@@ -496,7 +509,7 @@ a:link, a:hover, a:active, a:visited{
 }
 .divider:nth-child(even){
   background: rgba(255,255,255,1.0);
-  background: radial-gradient(#fff, #fff, rgba(230, 246, 255, 0.8));
+  background: radial-gradient(#fff, #fff, rgba(255, 255, 255, 0.8));
 }
 .divider:first-child{
   padding-top: 0px;

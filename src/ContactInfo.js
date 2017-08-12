@@ -12,13 +12,14 @@ export default class ContactInfo extends React.Component {
     this.state={'scroll': true};
   }
   componentDidMount(){
+    this.showScroll();
     window.onscroll = this.showScroll;
   }
 
   showScroll(event){
     if(this.state.scroll === true){
       const itemList = document.querySelectorAll(".contact-container-item");
-      let count = 1000;
+      let count = 0;
       itemList.forEach(function(e){
         setTimeout(function(){
           e.style.marginTop="100px";

@@ -96,22 +96,32 @@ export default class EmailForm extends React.Component {
                 errorText={this.state.forms.email && "O email deve seguir o formato mail seguido de @ e depois o domínio (gmail.com, yahoo.com.br, hotmail.com)"}
                 fullWidth={true}
                 name="email"
-                onChange = {this.valid} />
+                onChange = {this.valid}
+                hintStyle={{color:'#152635'}} />
             </Cell>
             <Cell col={12}>
               <TextField hintText="Digite seu nome..."
                 floatingLabelText="Nome"
                 fullWidth={true}
+                hintStyle={{color:'#152635'}}
                 errorText={this.state.forms.name && "Seu nome é obrigatório"}
                 onChange={this.valid}
                 name="name" /> 
             </Cell>
             <Cell col={12}>
-              <TextField hintText="(XX) XXXXX-XXXX" floatingLabelText="Telefone (XX) XXXXX-XXXX" fullWidth={true} pattern="^\(\d+\) \d+-\d{4,}$" name="phone"/>
+              <TextField
+                 hintText="(XX) XXXXX-XXXX"
+                 floatingLabelText="Telefone (XX) XXXXX-XXXX" 
+                 fullWidth={true} 
+                 pattern="^\(\d+\) \d+-\d{4,}$" 
+                 name="phone"
+                 hintStyle={{color:'#152635'}}
+              />
             </Cell>
             <Cell col={12}>
               <TextField hintText="Entre com assunto do e-mail..."
                 floatingLabelText="*Assunto"
+                hintStyle={{color:'#152635'}}
                 fullWidth={true}
                 errorText={this.state.forms.subject && "Assunto do e-mail é obrigatório"}
                 onChange={this.valid}
@@ -125,6 +135,7 @@ export default class EmailForm extends React.Component {
                 rows={4}
                 onChange={this.valid}
                 errorText={this.state.forms.body && "Este campo é obrigatório, pois é o corpo do e-mail"}
+                hintStyle={{color:'#152635'}}
                 name="body"/>
             </Cell>
             <Cell col={12}>

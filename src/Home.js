@@ -114,8 +114,9 @@ export default class Home extends React.Component {
             arrowLeft={ArrowLeft}
             arrowRight={ArrowRight}
             dots={Dots}
-            duration={300}
-            delay={3000}
+            autoplay
+            duration={800}
+            delay={5000}
             width="100%"
           >
             <div className="slide-card">

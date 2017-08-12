@@ -3,6 +3,7 @@ import React from 'react';
 import EmailForm from './EmailForm';
 import Map from './Map';
 import ContactInfo from './ContactInfo';
+import Comment from './Comment';
 
 export default class Contact extends React.Component {
   render(){
@@ -21,6 +22,14 @@ export default class Contact extends React.Component {
             <ContactInfo />
           </div>
         </div>
+        <div className="divider" id="contact-facebook">
+          <div className="home-title">
+            <span>Deixe seu comentário</span>
+          </div>
+          <div className="divider-content">
+          <Comment />
+          </div>
+        </div>
         <div className="divider">
           <div className="home-subtitle">
             <span id="contact">Envie-nos um email</span>
@@ -33,7 +42,7 @@ export default class Contact extends React.Component {
           <div className="home-title">
             <span id="map">Localização no mapa</span>
           </div>
-          <div className="maps">
+          <div className="maps divider-content">
             <Map />
           </div>
         </div>
