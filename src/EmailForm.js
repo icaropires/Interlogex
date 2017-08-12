@@ -1,4 +1,5 @@
 import React from 'react';
+import TextField from 'material-ui/TextField';
 import { Grid, Cell, Textfield,
 	 Spinner, Snackbar } from 'react-mdl';
 import request from 'ajax-request';
@@ -9,6 +10,7 @@ export default class EmailForm extends React.Component {
     this.state = { forms: {}, is_send: false, snackbar: false };
     this.handleForm = this.handleForm.bind(this);
     this.handleTimeout = this.handleTimeout.bind(this);
+    this.valid = this.valid.bind(this);
   }
 
   handleForm(event_submit) {
@@ -66,6 +68,25 @@ export default class EmailForm extends React.Component {
       && form.subject.value.length
       && form.body.value.length;
   }
+  valid(event, value){
+    const forms = this.state.forms;
+    if(event.target.name === "email"){
+      forms['email'] = !/^(\w|-|\.)+@\w+\.\w{2,}(\.\w{2,})*$/g.test(value);
+    }
+    if(event.target.name === "name"){
+      forms['name'] = value.length <= 0;
+    }
+    if(event.target.name === "body"){
+      forms['body'] = value.length <= 0;
+    }
+    if(event.target.name === "subject"){
+      forms['subject'] = value.length <= 0;
+    }
+
+    this.setState({forms});
+    console.log(this.state);
+    console.log(event, value);
+  }
 
   render(){
     if(!this.state.is_send){
@@ -73,24 +94,53 @@ export default class EmailForm extends React.Component {
         <div>
           <form onSubmit={this.handleForm}>
             <Cell col={12}>
-              <Textfield label="*Email mail@mail.com" 
-                floatingLabel 
+              <TextField hintText="Seu e-mail..." 
+                floatingLabelText="Email mail@mail.com"
                 pattern="^(\w|-|\.)+@\w+\.\w{2,}(\.\w{2,})*$" 
-                style={{width: "100%"}}
-                required={this.state.forms.email}
-                name="email" />
+                errorText={this.state.forms.email && "O email deve seguir o formato mail seguido de @ e depois o domínio (gmail.com, yahoo.com.br, hotmail.com)"}
+                fullWidth={true}
+                name="email"
+                onChange = {this.valid}
+                hintStyle={{color:'#152635'}} />
             </Cell>
             <Cell col={12}>
-              <Textfield label="*Nome" floatingLabel style={{width: "100%"}} required={this.state.forms.name} name="name"/> 
+              <TextField hintText="Digite seu nome..."
+                floatingLabelText="Nome"
+                fullWidth={true}
+                hintStyle={{color:'#152635'}}
+                errorText={this.state.forms.name && "Seu nome é obrigatório"}
+                onChange={this.valid}
+                name="name" /> 
             </Cell>
             <Cell col={12}>
-              <Textfield label="Telefone (XX) XXXXX-XXXX" pattern="^\(\d+\) \d+-\d{4,}$" floatingLabel style={{width: "100%"}} name="phone"/>
+              <TextField
+                 hintText="(XX) XXXXX-XXXX"
+                 floatingLabelText="Telefone (XX) XXXXX-XXXX" 
+                 fullWidth={true} 
+                 pattern="^\(\d+\) \d+-\d{4,}$" 
+                 name="phone"
+                 hintStyle={{color:'#152635'}}
+              />
             </Cell>
             <Cell col={12}>
-              <Textfield label="*Assunto" floatingLabel style={{width: "100%"}}  required={this.state.forms.subject} name="subject" />
+              <TextField hintText="Entre com assunto do e-mail..."
+                floatingLabelText="*Assunto"
+                hintStyle={{color:'#152635'}}
+                fullWidth={true}
+                errorText={this.state.forms.subject && "Assunto do e-mail é obrigatório"}
+                onChange={this.valid}
+                name="subject" />
             </Cell>
             <Cell col={12}>
-              <Textfield label="*Mensagem" rows={5} floatingLabel style={{width: "100%"}}  required={this.state.forms.body} name="body"/>
+              <TextField hintText="Digite aqui a mensagem..."
+                floatingLabelText="*Mensagem"
+                fullWidth={true}
+                multiLine={true}
+                rows={4}
+                onChange={this.valid}
+                errorText={this.state.forms.body && "Este campo é obrigatório, pois é o corpo do e-mail"}
+                hintStyle={{color:'#152635'}}
+                name="body"/>
             </Cell>
             <Cell col={12}>
               <input type="submit" className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" style={{background: '#152635', color: '#9f9f9f'}} value="Enviar e-mail" />
