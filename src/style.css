@@ -266,18 +266,42 @@ a:link, a:hover, a:active, a:visited{
   color: #797979 !important;
   text-align: center !important;
 }
-.pre_header{
+.pre-header{
   position: relative;
   width: 100%;
+  height: 250px;
+  background-image: url('../public/imagem/high_way.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pre_header img{
   height: 250px;
   width: 100%;
 }
-.pre_header_text{
+.pre-header-text{
   position: absolute;
   bottom: 10px;
   right: 10px;
+  line-height: 1.5em;
+  font-size: 1.6em;
+  color: #606062;
+  background: radial-gradient(#fff, #fff, rgba(224, 224, 224, 0.8));
+  padding: 30px;
+  border-radius: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+.pre-header-text .title{
+  color: #872f54;
+}
+.pre-header-text .content-attention{
+  background: rgb(255,255,99);
+  display: inline;
+  transition: all 450ms;
+}
+.pre-header-text .attention{
+  color: red;
 }
 
 #content{
@@ -340,7 +364,7 @@ a:link, a:hover, a:active, a:visited{
 #footer{
   background: #020C1A;
   padding: 0 40px;
-  height: 262px;
+  /*height: 262px;*/
   overflow: hidden;
 }
 
@@ -601,6 +625,9 @@ color: white;
 }
 
 @media only screen and (max-width: 671px) {
+  .pre-header-text{
+    font-size: 1em;
+  }
   .card-item{
     display: inline-block;
     margin-right: 20px;

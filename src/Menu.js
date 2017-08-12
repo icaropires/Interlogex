@@ -53,9 +53,9 @@ export default class MenuInterlogex extends React.Component {
           <div className="wrapper-menu">
             <Link className={this.state.activeItem === "/"?ms:m} to="/"><span>Home</span></Link>
           </div>
-          <div className="wrapper-menu">
+          {/**<div className="wrapper-menu">
             <Link to="/servicos" className={this.state.activeItem === "/servicos"?ms:m}><span>Serviços</span></Link>
-          </div>
+          </div>*/}
           <div className="wrapper-menu">
             <Link to="/contato" className={this.state.activeItem === "/contato"?ms:m}><span>Contatos</span></Link>
           </div>
