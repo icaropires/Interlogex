@@ -51,7 +51,7 @@ class CardService extends React.Component {
           </CardText>
           <CardActions>
             <Divider />
-            <Link to="/servicos"><FlatButton label="Veja mais!" /></Link>
+            <Link to={"/servicos#"+this.props.link}><FlatButton label="Veja mais!" /></Link>
           </CardActions>
         </Card>
       );
@@ -105,7 +105,9 @@ export default class Home extends React.Component {
       }
     }
   }
-
+  openId(hash){
+    window.location.hash=hash;
+  }
   render() {
     return (
       <div>
@@ -127,7 +129,7 @@ export default class Home extends React.Component {
             <div className="slide-card">
               <div className="slide-image">
                 <h2>Descubra nossos serviços</h2>
-                <img  src={services} />
+                <img onClick={this.openId.bind(this, '#service')} src={services} />
               </div>
               <div className="slide-text">
                 Transportamos suas mercadorias com agilidade, compromisso, eficiência e rapidez em todo Distrito Federal e Goiás. <br />
@@ -137,7 +139,7 @@ export default class Home extends React.Component {
             <div className="slide-card">
               <div className="slide-image">
                 <h2>Relacionamento com os clientes</h2>
-                <img  src={negotiation} />
+                <img onClick={this.openId.bind(this, '#client')} src={negotiation} />
               </div>
               <div className="slide-text">
                 Nossos clientes são diversificados e, para atendermos cada vez melhor, buscamos sempre excelência em nossos serviços.<br /><Link to="#client"><RaisedButton label="Ver"  /></Link>
@@ -146,7 +148,7 @@ export default class Home extends React.Component {
             <div className="slide-card">
               <div className="slide-image">
                 <h2>Descubra quem somos</h2>
-                <img  src={business_values} />
+                <img onClick={this.openId.bind(this, '#about')} src={business_values} />
               </div>
               <div className="slide-text">
                 Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal. <br /><Link to="#about"><RaisedButton label="Ver"  /></Link>
@@ -155,7 +157,7 @@ export default class Home extends React.Component {
             <div className="slide-card">
               <div className="slide-image">
                 <h2>Saiba como nós pensamos</h2>
-                <img  src={business} />
+                <img onClick={this.openId.bind(this, '#about-business')} src={business} />
               </div>
               <div className="slide-text">
                 A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa <strong>VISÃO</strong>, <strong>MISSÃO</strong> e <strong>VALORES</strong><br /><Link to="#about-business"><RaisedButton label="Ver"  /></Link>
@@ -171,7 +173,8 @@ export default class Home extends React.Component {
                 mainTitle="Contratos"
                 overlayTitle="Exclusividade"
                 mainSubTitle="Exclusividade"
-                image={contract} >
+                image={contract}
+                link="exclusive" >
                 Contrate um de nossos motoboys de forma exclusiva!
                 <Divider />
                 Recrute-o por 1 dia, 1 semana ou o tempo que necessitar!
@@ -182,7 +185,8 @@ export default class Home extends React.Component {
                 mainTitle="Contratos"
                 overlayTitle="Agendamento"
                 mainSubTitle="Agendamento"
-                image={schedule} >
+                image={schedule}
+                link="schedule" >
                 Faça o agendamento das entregas para períodos definidos por você!
                 <Divider />
                 Escolha um motoboy em específico e agende as entregas.
@@ -193,7 +197,8 @@ export default class Home extends React.Component {
                 mainTitle="Sob demanda"
                 overlayTitle="Por horas"
                 mainSubTitle="Quando precisar"
-                image={byTime} >
+                image={byTime}
+                link="by-hour" >
                 Contrate um nossos serviços pela quantidade de horas que precisar!
                 <Divider />
                 Polpe seu dinheiro, pague somente as horas que necessitar das entregas.
@@ -204,7 +209,8 @@ export default class Home extends React.Component {
                 mainTitle="Sob demanda"
                 overlayTitle="Pela distância"
                 mainSubTitle="Quando precisar"
-                image={byDistance} >
+                image={byDistance}
+                link="by-distance" >
                 Faça suas entregas e não se preocupe com o tempo.
                 <Divider />
                 Calculamos o valor de cada entrega baseado na distância da entrega.

@@ -14,7 +14,7 @@ export default class MenuInterlogex extends React.Component {
   }
 
   getPageNameFromUrl(){
-    const urls_name = {'/': 'Página inicial',
+    const urls_name = {'/': 'Interlogex',
       '/servicos': 'Nossos Serviços',
       '/contato': 'Contatos',
       '/areacliente': 'Área do cliente'
@@ -53,9 +53,9 @@ export default class MenuInterlogex extends React.Component {
           <div className="wrapper-menu">
             <Link className={this.state.activeItem === "/"?ms:m} to="/"><span>Home</span></Link>
           </div>
-          {/**<div className="wrapper-menu">
+          <div className="wrapper-menu">
             <Link to="/servicos" className={this.state.activeItem === "/servicos"?ms:m}><span>Serviços</span></Link>
-          </div>*/}
+          </div>
           <div className="wrapper-menu">
             <Link to="/contato" className={this.state.activeItem === "/contato"?ms:m}><span>Contatos</span></Link>
           </div>
@@ -67,12 +67,15 @@ export default class MenuInterlogex extends React.Component {
           <IconMenu
             iconButtonElement={<IconButton><MenuIcon /></IconButton>}
           >
-            <Link to="/"><MenuItem primaryText="Home" /></Link>
-            <Link to="/servicos"><MenuItem primaryText="Serviços" /></Link>
-            <Link to="/contato"><MenuItem primaryText="Contatos" /></Link>
-            <Link to="/areacliente"><MenuItem primaryText="Área do cliente" /></Link>
+            <MenuItem primaryText="Home" containerElement={<Link to="/" />}/>
+            <MenuItem primaryText="Serviços" containerElement={<Link to="/servicos" />}  />
+            <MenuItem primaryText="Contatos" containerElement={<Link to="/contato" />}  />
+            <MenuItem primaryText="Área do cliente" containerElement={<Link to="/areacliente" />}  />
           </IconMenu>
-          <h4>{this.getPageNameFromUrl()}</h4>
+          <h3>{this.getPageNameFromUrl()}</h3>
+          <div className="app-number">
+            Ligue já! <span className="ddd">(61)</span> 3554-5467
+          </div>
         </div>
       </div>
     );
