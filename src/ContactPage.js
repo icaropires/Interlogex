@@ -5,13 +5,15 @@ import Map from './Map';
 import ContactInfo from './ContactInfo';
 import Comment from './Comment';
 
+import manCard from '../public/imagem/man_card.jpg';
+
 export default class Contact extends React.Component {
   render(){
     return (
       <div>
         <div className="divider">
           <div className="contact-page-init">
-            <img src="https://static.pexels.com/photos/326569/pexels-photo-326569.jpeg" />
+            <img src={manCard} />
           </div>
         </div>
         <div id='contacts' className="divider">
