@@ -91,16 +91,17 @@ export default class Home extends React.Component {
       if(document.getElementsByClassName('home-about')[0].offsetTop-400 < window.scrollY){
         const itemList = document.querySelectorAll(".home-objective-item");
         let count = 0;
-        itemList.forEach(function(e){
-          setTimeout(function(){
+        for(var i=0; i<itemList.length; i++){
+          setTimeout(function(e){
             e.style.marginLeft="100px";
-            setTimeout(function(){
+            setTimeout(function(e){
               e.children[0].style.color="#448aff";
               e.style.color="#000";
-            }, 1000);
+            }, 1000, e);
           }
-          ,count);
-          count += 1000;});
+          ,count, itemList[i]);
+          count += 1000;
+        }
         this.setState({'scroll': false});
       }
     }
@@ -166,7 +167,7 @@ export default class Home extends React.Component {
           </Slides>
         </div>
         <div className="divider">
-          <div className="home-title" id="service"><span>Serviços</span></div>
+          <div className="home-title" id="service"><span><b>S</b>erviços</span></div>
           <div className="card-wrapper">
             <div className="card-item">
               <CardService
@@ -219,7 +220,7 @@ export default class Home extends React.Component {
           </div>
         </div>
         <div className="divider">
-          <div className="home-title" id="client"><span>Clientes</span></div>
+          <div className="home-title" id="client"><span><b>C</b>lientes</span></div>
           <div>
             <Paper className="home-paper" style={{marginLeft: "10%"}} zDepth={4}>
               <div id="home-paper">
@@ -231,7 +232,7 @@ export default class Home extends React.Component {
       Para tanto, dispomos de uma equipe comprometida, eficiente, especializada e em busca constante pela excelência na qualidade dos serviços.
     </p>
     <div className="home-medias">
-      <div className="home-subtitle"><span>Mídias sociais</span></div>
+      <div className="home-subtitle"><span><b>M</b>ídias sociais</span></div>
 
 
       <span className="content">Acreditamos que a melhor propaganda será a indicação dos nossos serviços.<br /></span>
@@ -241,14 +242,14 @@ export default class Home extends React.Component {
     </div>
 
     <div className="home-email">
-      <div className="home-subtitle"><span>Mande e-mail</span></div>
+      <div className="home-subtitle"><span><b>M</b>ande e-mail</span></div>
       <EmailForm />
     </div>
   </div>
 </div>
 <div id="about_us" className="divider home-about">
   <img className="home-about-background" src={interlogex} />
-  <div className="home-title" id="about"><span>A Interlogex</span></div>
+  <div className="home-title" id="about"><span><b>A</b> Interlogex</span></div>
   <div>
     <p>Nós somos uma empresa de transporte de pequenos volumes e documentos sediada no Distrito Federal, e fornecemos: <br />
       <div className="home-objective">
@@ -273,7 +274,7 @@ export default class Home extends React.Component {
       Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
   </div>
   <div id="about-business">
-    <div className="home-subtitle"><span>Visão de negócio</span></div>
+    <div className="home-subtitle"><span><b>V</b>isão de negócio</span></div>
     <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa:</p>
     <Tabs tabItemContainerStyle={{background: '#152635'}} contentContainerClassName="home-tab" >
       <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES" >

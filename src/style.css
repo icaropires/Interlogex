@@ -169,7 +169,7 @@ a:link, a:hover, a:active, a:visited{
   margin-top: 15px;
 }
 
-.home-title span:first-letter{
+.home-title b{
   color: #3d8add;
   font-size: 39px;
 }
@@ -207,7 +207,7 @@ a:link, a:hover, a:active, a:visited{
   padding: 0 15px;
   display: inline-block;
 }
-.home-subtitle span:first-letter{
+.home-subtitle b{
   color: #ff4081;
   font-size:29px
 }
@@ -517,12 +517,13 @@ a:link, a:hover, a:active, a:visited{
   height: 40%;
 }
 .contact-page-init{
-  position: absolute;
+  position: relative;
   overflow: hidden;
   height: 250px;
-}
-.contact-page-init img{
-  width: 100%;
+  background: url("../public/imagem/man_card.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card-contact{
@@ -564,7 +565,6 @@ color: white;
 }
 
 #social-media{
-  margin-top: 200px;
 }
 
 .ddd{

@@ -18,14 +18,20 @@ export default class ContactInfo extends React.Component {
 
   showScroll(event){
     if(this.state.scroll === true){
-      const itemList = document.querySelectorAll(".contact-container-item");
-      let count = 0;
-      itemList.forEach(function(e){
-        setTimeout(function(){
-          e.style.marginTop="100px";
-        }, count);
-        count += 1000;});
-      this.setState({'scroll': false});
+      try{
+        const itemList = document.querySelectorAll(".contact-container-item");
+        console.log(itemList);
+        let count = 0;
+        for(var i=0; i<itemList.length; i++){
+          setTimeout(function(e){
+            e.style.marginTop="100px";
+          }, count,itemList[i]);
+          count += 1000;
+        }
+        this.setState({'scroll': false});
+      } catch(e){
+        console.log(e);
+      }
     }
   }
   render(){

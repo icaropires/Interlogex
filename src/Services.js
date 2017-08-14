@@ -20,14 +20,15 @@ export default class Services extends Component {
   }
 
   componentDidMount(){
-    document.querySelectorAll(".service-objective-item").forEach(function(e, i){
-      setTimeout(function(){
+    const elements = document.querySelectorAll(".service-objective-item");
+    for(var i=0; i< elements.length; i++){
+      setTimeout(function(e){
         e.style.opacity = "1";
-        setTimeout(function(){
+        setTimeout(function(e){
           e.children[0].style.color="#448aff";
-        }, 1000);
-      }, i*400);
-    });
+        }, 1000, e);
+      }, i*400, elements[i]);
+    }
     window.onscroll = this.showScroll;
   }
 
@@ -45,11 +46,11 @@ export default class Services extends Component {
 
   show(cls){
     const itemList = document.querySelectorAll(cls);
-    itemList.forEach(function(e, i){
-      setTimeout(function(){
+    for(var i=0; i<itemList.length; i++){
+      setTimeout(function(e){
         e.style.marginLeft="0px";
-      },1000*i);
-    });
+      },1000*i, itemList[i]);
+    }
   }
 
   render() {
@@ -108,7 +109,7 @@ export default class Services extends Component {
           </div>
         </div>
         <div className="home-title" style={{paddingTop: "40px"}}>
-          <span>Tipos de serviços</span>
+          <span><b>T</b>ipos de serviços</span>
         </div>
         <div className="divider-content">
           <div className="service-precontent">
@@ -117,10 +118,10 @@ export default class Services extends Component {
           <Divider />
           <div className="divider">
             <div id="exclusive" className="home-subtitle">
-              <span>Contratos</span>
+              <span><b>C</b>ontratos</span>
             </div>
             <div className="service-content first">
-              <div className="home-subsubtitle"><span>Entregadores reservados</span></div>
+              <div className="home-subsubtitle"><span><b>E</b>ntregadores reservados</span></div>
               <img src={service_base} />
               <p>
                 Possibilitamos que você reserve <strong>1 ou mais</strong> entregadores pelo tempo que precissar.
@@ -134,7 +135,7 @@ export default class Services extends Component {
             </div>
             <div className="service-content first">
               <div id="schedule" className="home-subsubtitle">
-                <span>Agende o que precisar</span>
+                <span><b>A</b>gende o que precisar</span>
               </div>
               <img src={schedule} />
               <p>
@@ -156,11 +157,11 @@ export default class Services extends Component {
           </div>
           <div className="divider">
             <div id="by-hour" className="home-subtitle">
-              <span>Demanda</span>
+              <span><b>D</b>emanda</span>
             </div>
             <div className="service-content second">
               <div className="home-subsubtitle">
-                <span>Tempo</span>
+                <span><b>T</b>empo</span>
               </div>
               <img src={controll} />
               <p>
@@ -175,7 +176,7 @@ export default class Services extends Component {
             </div>
             <div className="service-content second">
               <div id="by-distance" className="home-subsubtitle">
-                <span>Distância</span>
+                <span><b>D</b>istância</span>
               </div>
               <img src={togo} />
               <p>Este tipo de contrato é o convêncional, no qual, são combinados locais de coleta e entrega das mercadorias e o valor é dado pela distância entre estes locais!                

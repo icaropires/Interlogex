@@ -13,12 +13,11 @@ export default class Contact extends React.Component {
       <div>
         <div className="divider">
           <div className="contact-page-init">
-            <img src={manCard} />
           </div>
         </div>
         <div id='contacts' className="divider">
           <div id="social-media" className="home-title">
-            <span>Contatos</span>
+            <span><b>C</b>ontatos</span>
           </div>
           <div className="divider-content">
             <ContactInfo />
@@ -26,7 +25,7 @@ export default class Contact extends React.Component {
         </div>
         <div className="divider" id="contact-facebook">
           <div className="home-title">
-            <span>Deixe seu comentário</span>
+            <span><b>D</b>eixe seu comentário</span>
           </div>
           <div className="divider-content">
           <Comment />
@@ -34,7 +33,7 @@ export default class Contact extends React.Component {
         </div>
         <div className="divider">
           <div className="home-subtitle">
-            <span id="contact">Envie-nos um email</span>
+            <span id="contact"><b>E</b>nvie-nos um email</span>
           </div>
           <div className="divider-content">
             <EmailForm />
@@ -42,7 +41,7 @@ export default class Contact extends React.Component {
         </div>
         <div className="divider">
           <div className="home-title">
-            <span id="map">Localização no mapa</span>
+            <span id="map"><b>L</b>ocalização no mapa</span>
           </div>
           <div className="maps divider-content">
             <Map />

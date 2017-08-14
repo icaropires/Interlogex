@@ -10,18 +10,18 @@ export default class ClientArea extends Component {
             <div  className="client_head">
             </div>
             <div className="home-title">
-              <span>ACOMPANHE SEUS PEDIDOS</span>
+              <span><b>A</b>COMPANHE SEUS PEDIDOS</span>
             </div>
             <div className="divider-content" style={{overflow: 'hidden'}}>
               <div className="divider-split">
                 <div className="home-subtitle">
-                  <span>Login</span>
+                  <span><b>L</b>ogin</span>
                 </div>
                 <ClientLogin />
               </div>
               <div className="divider-split">
                 <div className="home-subtitle">
-                  <span>Avaliações</span>
+                  <span><b>A</b>valiações</span>
                 </div>
                 <Comment url="interlogex.com.br/areacliente"/>
               </div>
