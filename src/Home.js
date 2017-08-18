@@ -74,8 +74,8 @@ export default class Home extends React.Component {
       element.style.opacity="0"; 
       setTimeout(function(){
         this.setState({'depoimentCount': (this.state.depoimentCount+1) % depoimentList.length})
-        element.style.opacity="1";}.bind(this), 600);
-    }.bind(this), 3000)});
+        element.style.opacity="1";}.bind(this), 800);
+    }.bind(this), 7000)});
   }
 
   componentWillUnmount(){
@@ -118,8 +118,8 @@ export default class Home extends React.Component {
             arrowRight={ArrowRight}
             dots={Dots}
             autoplay
-            duration={800}
-            delay={5000}
+            duration={1000}
+            delay={9000}
             width="100%"
           >
             <div className="slide-card">
@@ -178,7 +178,7 @@ export default class Home extends React.Component {
                 link="exclusive" >
                 Contrate um de nossos motoboys de forma exclusiva!
                 <Divider />
-                Recrute-o por 1 dia, 1 semana ou o tempo que necessitar!
+                Recrute-o por um dia, uma semana ou o tempo que necessitar!
               </CardService>
             </div>
             <div className="card-item">
@@ -271,11 +271,10 @@ export default class Home extends React.Component {
       </div>
       <br />
       Entregas rápidas e eficientes caracterizam nosso serviço, para isso contamos com uma equipe especializada, apta a prestar serviços em todo território nacional.<br />
-      Para isto, contamos com uma boa equipe de entregadores e excelentes em relacionamento com os clientes. Atendentes preparados para oferecer o melhor serviço a sua necessidade.</p>
+    </p>
   </div>
   <div id="about-business">
     <div className="home-subtitle"><span><b>V</b>isão de negócio</span></div>
-    <p>A nossa visão de negócio e que norteia nosso trabalho são baseados na nossa:</p>
     <Tabs tabItemContainerStyle={{background: '#152635'}} contentContainerClassName="home-tab" >
       <Tab icon={<FontIcon className="material-icons">star</FontIcon>} label="VALORES" >
         <p>Trabalhamos de forma <strong>ética</strong>, buscamos a <strong>retidão</strong> na prestação de nossos serviços para nos mantermos na linha da <strong>justiça</strong>.</p>

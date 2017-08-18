@@ -127,7 +127,7 @@ export default class Services extends Component {
                 Possibilitamos que você reserve <strong>1 ou mais</strong> entregadores pelo tempo que precissar.
               </p>
               <p>
-                Nossos entregadores são profissionais e estarão a sua disposição para resolver questões simples que demandem <strong>tempo</strong> para <strong>você!</strong>
+                Nossos entregadores são profissionais capacitados e estarão a sua disposição para resolver questões simples que demandem <strong>tempo</strong> para <strong>você!</strong>
               </p>
               <p>
                 <strong>Recomendamos</strong> para quem não sabe quando vai precisar de serviços de entrega. Mas tem certeza que precisará utilizar várias vezes por um determinado período.
@@ -144,14 +144,8 @@ export default class Services extends Component {
               <p>
                 Disponibilizamos nossos entregadores para atender as suas demandas nos períodos que contratar, podendo ser períodos distintos para atender <strong>suas necessidades.</strong>
               </p>
-              <p>
-                Disponibilizamos agendamentos de acordo com sua agenda. Seja toda segunda-feira das 8h-12h, todos os dias da semana das 16h-18h, a primeira sexta-feira de todos os meses por 5 meses.<br />
-              </p>
               <p style={{textAlign: "center"}}>
               <strong>Qualquer que seja sua necessidade de agendamento, nós atenderemos!</strong>
-              </p>
-              <p>
-              <strong>Recomendamos</strong> para quem precisa de serviços de entrega periódicamente e não querem precisar contratar um novo serviço periódicamente.
               </p>
             </div>
           </div>
@@ -165,13 +159,10 @@ export default class Services extends Component {
               </div>
               <img src={controll} />
               <p>
-              Contrate os serviços de entrega pela quantidade de horas que precisar no dia. É uma forma simples de contrato, no qual não é preciso especificar a distância, apenas onde o entregador deve iniciar e os locais das entregas, assim, será cobrado pelo tempo que funcionário estiver prestando o serviço.
+              Contrate os serviços de entrega pela quantidade de horas que precisar no dia. É uma forma simples de contrato, no qual não é preciso especificar a distância, apenas onde o entregador deve iniciar e os locais das entregas, assim, será cobrado pelo tempo que o funcionário estiver prestando o serviço.
               </p>
               <p>
-                Neste tipo de contrato, o entregador está disponível pelo tempo quer for necessário para cumprir a demanda. E como nossos funcionários são profissionais, eles podem resolver assuntos no cartório, pagamentos em caixas bancários, o que você precisar!
-              </p>
-              <p>
-              <strong>Recomendamos</strong> para quem deseja realizar mais de uma entrega, e não sabe quais lugares e quantas vezes ela irá necessitar do serviço.
+                Neste tipo de contrato, o entregador estará disponível pelo tempo quer for necessário para cumprir a demanda. Eles são autorizados a pegar filas em cartórios, bancos, órgãos públicos de acordo com a necessidade do cliente!
               </p>
             </div>
             <div className="service-content second">
@@ -183,9 +174,6 @@ export default class Services extends Component {
               </p>
               <p>
               Estará disponível para realizar uma <strong>rota de entregas</strong>, na qual o nosso funcionário pode passar em vários locais para entregar as mercadorias.
-              </p>
-              <p>
-              <strong>Recomendamos</strong> para pessoas que desejam realizar entregas simples e únicas que não precisam de serviços adicionais, apenas coleta e entrega nos pontos combinados.
               </p>
             </div>
           </div>

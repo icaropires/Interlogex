@@ -34,8 +34,8 @@ import 'mdi/css/materialdesignicons.min.css';
 const PreHeader = (
   <div className="pre-header">
     <div className="pre-header-text">
-      <div className="title">InterlogEx</div>
-      <div>Somos o jeito certo de fazer entrega!</div>
+      <div className="title"><img src={logo} /></div>
+      <div>O jeito certo de fazer entrega!</div>
       <div className="content-attention"><span className="attention">Ligue já!</span> <span className="ddd">(61)</span> 3554-5467</div>
     </div>
   </div>
@@ -57,7 +57,7 @@ export default class App extends React.Component {
     setInterval(function(e){
       const element = document.getElementsByClassName("content-attention")[0];
       const background = element.style.background;
-      element.style.background = (background === "rgb(255, 255, 99)" ? "rgb(255, 255, 255)" : "rgb(255, 255, 99)");
+      element.style.background = (background === "rgb(255, 255, 99)" ? "rgba(255, 255, 255, 0)" : "rgb(255, 255, 99)");
     }, 1000);
   }
   render(){

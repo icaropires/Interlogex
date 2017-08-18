@@ -91,7 +91,7 @@ export default class FooterInterlogex extends React.Component {
              <Cell id='footer_address' col={12}>
                <Tooltip label="Nos veja no mapa!" large>
                  <Link id='footer_address' style={{textDecoration: "none", color: "inherit"}} to="/contato#map">
-                   SHVP Rua 10 Chácara 177 Casa 08 Condomínio Alphaville - Vicente Pires - DF
+                   SHVP Rua 10 Chácara 177 Lote 08 Condomínio Alphaville - Vicente Pires - DF
                  </Link>
                </Tooltip>
              </Cell>

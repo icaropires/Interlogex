@@ -295,16 +295,17 @@ a:link, a:hover, a:active, a:visited{
   bottom: 10px;
   right: 10px;
   line-height: 1.5em;
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: #606062;
   background: radial-gradient(#fff, #fff, rgba(224, 224, 224, 0.8));
   padding: 30px;
   border-radius: 100%;
   font-weight: bold;
   text-align: center;
+  overflow: hidden;
 }
-.pre-header-text .title{
-  color: #872f54;
+.pre-header-text .title img{
+  width: 300px;
 }
 .pre-header-text .content-attention{
   background: rgb(255,255,99);
