@@ -24,6 +24,7 @@ import contract from '../public/imagem/contract.jpg';
 import byTime from '../public/imagem/by_time.jpg';
 import schedule from '../public/imagem/schedule.jpg';
 import byDistance from '../public/imagem/by_distance.jpg';
+import carro from '../public/imagem/foto do carro.png';
 
 // <Link to={this.props.link.url}><Button colored ripple>{this.props.link.text}</Button></Link>
 
@@ -124,7 +125,8 @@ export default class Home extends React.Component {
           >
             <div className="slide-card">
               <div className="slide-image">
-                <img src={interlogexLogo} style={{height: '100%'}}/>
+                <img src={interlogexLogo} style={{maxWidth: '50%'}}/>
+                <img src={carro} style={{maxWidth: '45%', marginLeft: '5%'}}/>
               </div>
             </div>
             <div className="slide-card">

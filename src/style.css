@@ -280,9 +280,9 @@ a:link, a:hover, a:active, a:visited{
 .pre-header{
   position: relative;
   width: 100%;
-  height: 250px;
-  background-image: url('../public/imagem/high_way.jpg');
-  background-position: center center;
+  height: 500px;
+  background-image: url('../public/imagem/motoboy.jpg');
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -735,5 +735,10 @@ color: white;
   #content{
     margin-top:40px;
     margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 1440px){
+  .pre-header{
+    height: 300px;
   }
 }
